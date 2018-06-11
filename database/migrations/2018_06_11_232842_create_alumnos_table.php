@@ -17,7 +17,8 @@ class CreateAlumnosTable extends Migration
             $table->increments('id');
             $table->integer('tipo_de_curso')->unsigned();
             $table->foreign ('tipo_de_curso')->references('id')->on('tipodecursos');
-            $table->string('horarios');
+            $table->integer('horarios')->unsigned();
+            $table->foreign ('horarios')->references('id')->on('modalidad');
             $table->date('fecha_de_inicio');
             $table->string('frecuencia');
             $table->string('modalidad');

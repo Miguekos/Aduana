@@ -20,4 +20,11 @@ class Alumno extends Model
         return $tipo_curso->nombre;
     }
 
+    public function modalidades()
+    {
+        $tipo_curso = Tipodecurso::find($this->id);
+
+        return $tipo_curso->nombre;
+    }
+
 }
