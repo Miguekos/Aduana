@@ -17,9 +17,11 @@ class CreateAlumnosTable extends Migration
             $table->increments('id');
             $table->integer('tipo_de_curso')->unsigned();
             $table->foreign ('tipo_de_curso')->references('id')->on('tipodecursos');
-            $table->integer('horarios')->nullable();
+            $table->integer('horario')->unsigned();
+            $table->foreign('horario')->references('id')->on('horarios');
             $table->date('fecha_de_inicio')->nullable();
-            $table->string('frecuencia')->nullable();
+            $table->integer('frecuencia')->unsigned();
+            $table->foreign ('frecuencia')->references('id')->on('frecuencias');
             $table->integer('modalidad')->unsigned();
             $table->foreign ('modalidad')->references('id')->on('modalidads');
             $table->string('apellidos')->nullable();
@@ -43,7 +45,8 @@ class CreateAlumnosTable extends Migration
             $table->string('carrera_estudio')->nullable();
             $table->string('centro_laboral')->nullable();
             $table->string('direccion_laboral')->nullable();
-            $table->string('formas_de_pago')->nullable();
+            $table->integer('formas_de_pago')->unsigned();
+            $table->foreign('formas_de_pago')->references('id')->on('pagos');
             $table->string('publicidad')->nullable();
             $table->string('razon_social_fac')->nullable();
             $table->integer('dni_fac')->nullable();

@@ -92,7 +92,7 @@
                           <div class="form-group row">
                             <label class="col-md-3 col-form-label">Horarios</label>
                             <div class="col-md-9 col-form-label">
-                              <select class="form-control" name="horarios">
+                              <select class="form-control" name="horario">
                                 <option value="1">Mañana</option>
                                 <option value="2">Tarde</option>
                                 <option value="3">Noche</option>

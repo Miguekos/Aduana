@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Console\PackageDiscoverCommand;
 
 class Alumno extends Model
 {
@@ -25,6 +26,18 @@ class Alumno extends Model
         $modalidad = Modalidad::find($this->id);
 
         return $modalidad->nombre;
+    }
+
+    public function forma_pagos()
+    {
+        $pagos = Pago::find($this->id);
+        return $pagos->nombre;
+    }
+
+    public function frecuencias()
+    {
+        $frecuencias = Frecuencia::find($this->id);
+        return $frecuencias->nombre;
     }
 
 }
