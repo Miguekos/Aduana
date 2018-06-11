@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateModalidadTable extends Migration
+class CreateModalidadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateModalidadTable extends Migration
      */
     public function up()
     {
-        Schema::create('modalidad', function (Blueprint $table) {
+        Schema::create('modalidads', function (Blueprint $table) {
             $table->increments('id');
-            $table->string ('nombre');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateModalidadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modalidad');
+        Schema::dropIfExists('modalidads');
     }
 }

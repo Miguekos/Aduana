@@ -35,7 +35,7 @@
                                 <td>{{ $alumno->dni }}</td>
                                 <td>{{ $alumno->fecha_de_inicio  }}</td>
                                 <td>{{ $alumno->tipos_cursos()  }}</td>
-                                <td>{{ $alumno->modalidad()  }}</td>
+                                <td>{{ $alumno->modalidad_nombre()  }}</td>
                                 <td>{{ $alumno->horarios  }}</td>
                                 <td>{{ $alumno->frecuencia  }}</td>
                                 <td>{{ $alumno->celular_p  }}</td>

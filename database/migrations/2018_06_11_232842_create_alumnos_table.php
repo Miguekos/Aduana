@@ -21,7 +21,7 @@ class CreateAlumnosTable extends Migration
             $table->date('fecha_de_inicio')->nullable();
             $table->string('frecuencia')->nullable();
             $table->integer('modalidad')->unsigned();
-            $table->foreign ('modalidad')->references('id')->on('modalidad');
+            $table->foreign ('modalidad')->references('id')->on('modalidads');
             $table->string('apellidos')->nullable();
             $table->string('nombre')->nullable();
             $table->string('direccion')->nullable();

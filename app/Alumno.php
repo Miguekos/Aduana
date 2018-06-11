@@ -20,11 +20,11 @@ class Alumno extends Model
         return $tipo_curso->nombre;
     }
 
-    public function modalidad()
+    public function modalidad_nombre()
     {
-        $modalidades = Modalidad::all();
+        $modalidad = Modalidad::find($this->id);
 
-        return $modalidades->id;
+        return $modalidad->nombre;
     }
 
 }
