@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call (ModalidadTableSeeder::class);
         $this->call (PagoTableSeeder::class);
         $this->call (TipodecursoTableSeeder::class);
-        $this->call (HorarioTableSeeder::class);
         // $this->call(MembresiaTableSeeder::class);
 
     }
