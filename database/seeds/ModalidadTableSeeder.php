@@ -16,7 +16,7 @@ class ModalidadTableSeeder extends Seeder
             if ($i == 0){
                 $nombre = "Presencial";
             }elseif ($i == 1){
-                $nombre = "Virtua|l";
+                $nombre = "Virtual";
             }
             $modalidad= Modalidad::create ([
                 'nombre' => $nombre,

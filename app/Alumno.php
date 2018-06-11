@@ -40,4 +40,9 @@ class Alumno extends Model
         return $frecuencias->nombre;
     }
 
+    public function horarios(){
+        $horarios = Horario::find($this->id);
+        return $horarios->nombre;
+    }
+
 }

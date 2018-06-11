@@ -119,10 +119,10 @@
                             <label class="col-md-3 col-form-label">Frecuencia</label>
                             <div class="col-md-9 col-form-label">
                               <select class="form-control" name="frecuencia">
-                                <option value="l_v">Intensivo (L - V)</option>
-                                <option value="l_m_v">Interdiario (L - M - V)</option>
-                                <option value="sabados">Sabados</option>
-                                <option value="">Otros (Especificar)</option>
+                                <option value="1">Intensivo (L - V)</option>
+                                <option value="2">Interdiario (L - M - V)</option>
+                                <option value="3">Sabados</option>
+                                <option value="4">Otros (Especificar)</option>
                               </select>
                             </div>
                           </div>
@@ -256,8 +256,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="form-group col-sm-12">
-                                <label for="dni">Forma de pago</label>
-                                <input class="form-control" id="formas_de_pago" required name="formas_de_pago" placeholder="" type="text">
+                                <label for="formas_de_pago">Forma de pago</label>
+                                <select class="form-control" name="formas_de_pago" id="formas_de_pago">
+                                    <option value="1">Efectivo</option>
+                                    <option value="2">Debiro</option>
+                                    <option value="3">Credito</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -329,7 +333,8 @@
 
             </div>
         </form>
+
 </div>
-</div>
+
 
 @endsection('content')
