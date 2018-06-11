@@ -9,9 +9,9 @@ class Alumno extends Model
     // protected $table = 'alumnos';
     protected $guarded = array();
 
-    public function tipodecursos(){
-      return $this->belongsTo(Tipodecurso::class);
-    }
+//    public function tipodecursos(){
+//      return $this->belongsTo(Tipodecurso::class);
+//    }
 
     public function tipos_cursos()
     {
@@ -20,11 +20,11 @@ class Alumno extends Model
         return $tipo_curso->nombre;
     }
 
-    public function modalidades()
+    public function modalidad()
     {
-        $tipo_curso = Tipodecurso::find($this->id);
+        $modalidades = Modalidad::all();
 
-        return $tipo_curso->nombre;
+        return $modalidades->id;
     }
 
 }

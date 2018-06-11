@@ -22,12 +22,7 @@
 
         <form action="{{ route('alumno.store') }}" method="POST">
             {{ csrf_field() }}
-            @foreach( $$titles as $title )
 
-                {{ tipos_cursos }}
-
-
-            @endforeach
             <div class="container-fluid">
               <div class="animated fadeIn">
                 <div class="row">
@@ -72,8 +67,8 @@
                             <label class="col-md-3 col-form-label">Modalidad</label>
                             <div class="col-md-9 col-form-label">
                               <select class="form-control" name="modalidad">
-                                <option value="presencial">Precencial</option>
-                                <option value="virtual">Virtual</option>
+                                <option value="1">Precencial</option>
+                                <option value="2">Virtual</option>
                               </select>
                             </div>
                           </div>
@@ -98,10 +93,10 @@
                             <label class="col-md-3 col-form-label">Horarios</label>
                             <div class="col-md-9 col-form-label">
                               <select class="form-control" name="horarios">
-                                <option value="mañana">Mañana</option>
-                                <option value="tarde">Tarde</option>
-                                <option value="noche">Noche</option>
-                                <option value="">Definir Horas (Otros)</option>
+                                <option value="1">Mañana</option>
+                                <option value="2">Tarde</option>
+                                <option value="3">Noche</option>
+                                <option value="4">Definir Horas (Otros)</option>
                               </select>
                             </div>
                           </div>
