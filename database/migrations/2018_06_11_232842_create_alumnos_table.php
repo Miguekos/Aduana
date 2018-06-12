@@ -30,14 +30,14 @@ class CreateAlumnosTable extends Migration
             $table->string('direccion')->nullable();
             $table->string('departamento')->nullable();
             $table->integer('edad')->nullable();
-            $table->integer('dni')->unique();
+            $table->string('dni')->nullable();
             $table->string('lugar_de_nacimiento')->nullable();
             $table->string('telf_fijo')->nullable();
             $table->string('celular_p')->nullable();
-            $table->string('email')->unique();
+            $table->string('email')->nullable();
             $table->string('facebook')->nullable();
             $table->string('padre_apoderado')->nullable();
-            $table->integer('dni_apo')->nullable();
+            $table->string('dni_apo')->nullable();
             $table->string('telf_fijo_apo')->nullable();
             $table->string('celular_apo')->nullable();
             $table->string('email_envio_material')->nullable();
@@ -54,7 +54,7 @@ class CreateAlumnosTable extends Migration
             $table->string('fecha_de_pago_cronocrama')->nullable();
             $table->string('publicidad')->nullable();
             $table->string('razon_social_fac')->nullable();
-            $table->integer('dni_fac')->nullable();
+            $table->string('dni_fac')->nullable();
             $table->string('telf_fac')->nullable();
             $table->string('direccion_fac')->nullable();
             $table->string('atentido')->nullable();

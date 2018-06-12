@@ -14,34 +14,33 @@ class Alumno extends Model
 //      return $this->belongsTo(Tipodecurso::class);
 //    }
 
-    public function tipo_de_curso_id()
+    public function tipo_de_curso_id($alumno)
     {
-        $tipo_curso = Tipodecurso::find($this->id);
+        $tipo_curso = Tipodecurso::find($alumno);
 
         return $tipo_curso->nombre;
     }
 
-    public function modalidad_id()
+    public function modalidad_id($alumno)
     {
-        $modalidad = Modalidad::find($this->id);
-
+        $modalidad = Modalidad::find($alumno);
         return $modalidad->nombre;
     }
 
-    public function forma_de_pago_id()
+    public function forma_de_pago_id($alumno)
     {
-        $pagos = Pago::find($this->id);
+        $pagos = Pago::find($alumno);
         return $pagos->nombre;
     }
 
-    public function frecuencia_id()
+    public function frecuencia_id($alumno)
     {
-        $frecuencias = Frecuencia::find($this->id);
+        $frecuencias = Frecuencia::find($alumno);
         return $frecuencias->nombre;
     }
 
-    public function horario_id(){
-        $horarios = Horario::find($this->id);
+    public function horario_id($alumno){
+        $horarios = Horario::find($alumno);
         return $horarios->nombre;
     }
 

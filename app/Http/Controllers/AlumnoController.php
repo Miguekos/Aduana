@@ -16,8 +16,8 @@ class AlumnoController extends Controller
     {
 //        $alumnos = Membresia::paginate(10);
 
-        $alumnos = Alumno::all ();
-        return view ('alumnos.index', compact ('alumnos'));
+        $alumno = Alumno::all ();
+        return view ('alumnos.index', compact ('alumno'));
     }
 
     /**
@@ -64,7 +64,7 @@ class AlumnoController extends Controller
      */
     public function edit($alumno)
     {
-        $alumnos = Alumno::find ($alumno);
+        $alumnos  = Alumno::findOrFail($alumno);
         return view ('alumnos.edit', compact ('alumnos'));
     }
 
@@ -77,8 +77,9 @@ class AlumnoController extends Controller
      */
     public function update(Request $request, $alumno)
     {
-        $alumnos = Alumno::create ($request->all ());
-//        return view ('alumnos.show',compact ('alumno'));
+        $alumnos  = Alumno::findOrFail($alumno);
+        $input = $request->all();
+        $alumnos->fill($input)->save();
         return redirect ()->route ('alumno.index');
     }
 

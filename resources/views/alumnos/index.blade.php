@@ -37,19 +37,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($alumnos as $alumno)
+                        @foreach($alumno as $alumnos)
                             <tr>
-                                <td>{{ $alumno->id }}</td>
-                                <td>{{ $alumno->nombre ." ". $alumno->apellidos }}</td>
-                                <td>{{ $alumno->dni }}</td>
-                                <td>{{ $alumno->fecha_de_inicio  }}</td>
-                                <td>{{ $alumno->tipo_de_curso_id()  }}</td>
-                                <td>{{ $alumno->modalidad_id()  }}</td>
-                                <td>{{ $alumno->horario_id()  }}</td>
-                                <td>{{ $alumno->frecuencia_id()  }}</td>
+                                <td>{{ $alumnos->id }}</td>
+                                <td>{{ $alumnos->nombre ." ". $alumnos->apellidos }}</td>
+                                <td>{{ $alumnos->dni }}</td>
+                                <td>{{ $alumnos->fecha_de_inicio  }}</td>
+                                <td>{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso)  }}</td>
+                                <td>{{ $alumnos->modalidad_id($alumnos->modalidad)  }}</td>
+                                <td>{{ $alumnos->horario_id($alumnos->horario)  }}</td>
+                                <td>{{ $alumnos->frecuencia_id($alumnos->frecuencia)  }}</td>
                                 <td>
-                                    <a type="" href="{{ route ('alumno.show', $alumno->id) }}" class="badge badge-success"> Ver</a>
-                                    <a type="" href="{{ route ('alumno.edit', $alumno->id) }}" class="badge badge-warning"> Editar</a>
+                                    <a type="" href="{{ route ('alumno.show', $alumnos->id) }}" class="badge badge-success"> Ver</a>
+                                    <a type="" href="{{ route ('alumno.edit', $alumnos->id) }}" class="badge badge-warning"> Editar</a>
                                 </td>
 
                             </tr>

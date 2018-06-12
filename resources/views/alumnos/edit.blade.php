@@ -37,7 +37,7 @@
                                         <label class="col-md-3 col-form-label">Tipo de Curso</label>
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="tipo_de_curso">
-                                                <option value="{{ $alumnos->tipo_de_curso_id() }}">{{ $alumnos->tipo_de_curso_id() }}</option>
+                                                <option value="{{ $alumnos->tipo_de_curso }}">{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso) }}</option>
                                                 <option value="1">Auxiliar de Despacho Aduanero (curso)</option>
                                                 <option value="2">Sectorista Aduanero (curso)</option>
                                                 <option value="3">Liquidador Aduanero (curso)</option>
@@ -67,7 +67,7 @@
                                         <label class="col-md-3 col-form-label">Frecuencia</label>
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="frecuencia">
-                                                <option value="{{ $alumnos->frecuencia_id() }}">{{ $alumnos->frecuencia_id() }}</option>
+                                                <option value="{{ $alumnos->frecuencia }}">{{ $alumnos->frecuencia_id($alumnos->frecuencia  ) }}</option>
                                                 <option value="1">Intensivo (L - V)</option>
                                                 <option value="2">Interdiario (L - M - V)</option>
                                                 <option value="3">Sabados</option>
@@ -97,7 +97,7 @@
                                         <label class="col-md-3 col-form-label">Horarios</label>
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="horario">
-                                                <option value="{{ $alumnos->horario_id() }}">{{ $alumnos->horario_id() }}</option>
+                                                <option value="{{ $alumnos->horario }}">{{ $alumnos->horario_id($alumnos->horario) }}</option>
                                                 <option value="1">Mañana</option>
                                                 <option value="2">Tarde</option>
                                                 <option value="3">Noche</option>
@@ -124,7 +124,7 @@
                                         <label class="col-md-3 col-form-label">Modalidad</label>
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="modalidad">
-                                                <option value="{{ $alumnos->modalidad_id() }}">{{ $alumnos->modalidad_id() }}</option>
+                                                <option value="{{ $alumnos->modalidad }}">{{ $alumnos->modalidad_id($alumnos->modalidad) }}</option>
                                                 <option value="1">Precencial</option>
                                                 <option value="2">Virtual</option>
                                             </select>
@@ -262,7 +262,7 @@
                                     <div class="form-group col-sm-3">
                                         <label for="formas_de_pago">Forma de pago</label>
                                         <select class="form-control" name="formas_de_pago" id="formas_de_pago">
-                                            <option value="{{ $alumnos->forma_de_pago_id() }}">{{ $alumnos->forma_de_pago_id() }}</option>
+                                            <option value="{{ $alumnos->formas_de_pago }}">{{ $alumnos->forma_de_pago_id($alumnos->formas_de_pago) }}</option>
                                             <option value="1">Pago Mensual</option>
                                             <option value="2">Pago Contado/Visa Net</option>
                                         </select>
