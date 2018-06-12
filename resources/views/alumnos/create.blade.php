@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Alumnos')
-@section('pagina', 'Alumnos')
+@section('pagina', 'Nuevo Alumnos')
 
 @section('content')
 
@@ -55,31 +55,33 @@
                     </div>
 
                   </div>
-                  <div class="col-md-6">
-
-                    <div class="card">
-                      <div class="card-header">
-                        <strong>Modalidad</strong>
-                        Datos
-                      </div>
-                      <div class="card-body">
-                          <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Modalidad</label>
-                            <div class="col-md-9 col-form-label">
-                              <select class="form-control" name="modalidad">
-                                <option value="1">Precencial</option>
-                                <option value="2">Virtual</option>
-                              </select>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Frecuencia</strong>
+                                Datos
                             </div>
-                          </div>
-                          <div class="form-group">
-                            <input type="date" class="form-control" id="fecha_de_inicio" name="fecha_de_inicio" placeholder="Fecha de Inicio">
-                          </div>
-                      </div>
-                      <div class="card-footer">
-                      </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">Frecuencia</label>
+                                    <div class="col-md-9 col-form-label">
+                                        <select class="form-control" name="frecuencia">
+                                            <option value="1">Intensivo (L - V)</option>
+                                            <option value="2">Interdiario (L - M - V)</option>
+                                            <option value="3">Sabados</option>
+                                            <option value="4">Otros (Especificar)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                  <input type="text" class="form-control" name="frecuencia" placeholder="Otros (Especificar)">
+                                </div> -->
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
                     </div>
-                  </div>
+
                 </div>
                 <div class="row">
                   <div class="col-md-6">
@@ -100,40 +102,38 @@
                               </select>
                             </div>
                           </div>
-                          <!-- <div class="form-group">
-                            <input type="text" class="form-control" name="horarios" placeholder="Definir Horas (Otros)">
-                          </div> -->
-                      </div>
-                      <div class="card-footer">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="card">
-                      <div class="card-header">
-                        <strong>Frecuencia</strong>
-                        Datos
-                      </div>
-                      <div class="card-body">
-                          <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Frecuencia</label>
-                            <div class="col-md-9 col-form-label">
-                              <select class="form-control" name="frecuencia">
-                                <option value="1">Intensivo (L - V)</option>
-                                <option value="2">Interdiario (L - M - V)</option>
-                                <option value="3">Sabados</option>
-                                <option value="4">Otros (Especificar)</option>
-                              </select>
-                            </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="definir_horas" placeholder="Definir Horas (Otros)">
                           </div>
-                          <!-- <div class="form-group">
-                            <input type="text" class="form-control" name="frecuencia" placeholder="Otros (Especificar)">
-                          </div> -->
                       </div>
                       <div class="card-footer">
                       </div>
                     </div>
                   </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Modalidad</strong>
+                                Datos
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">Modalidad</label>
+                                    <div class="col-md-9 col-form-label">
+                                        <select class="form-control" name="modalidad">
+                                            <option value="1">Precencial</option>
+                                            <option value="2">Virtual</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control" id="fecha_de_inicio" name="fecha_de_inicio" placeholder="Definir Horas">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
 
@@ -255,13 +255,24 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="form-group col-sm-12">
+                            <div class="form-group col-sm-3">
                                 <label for="formas_de_pago">Forma de pago</label>
                                 <select class="form-control" name="formas_de_pago" id="formas_de_pago">
-                                    <option value="1">Efectivo</option>
-                                    <option value="2">Debiro</option>
-                                    <option value="3">Credito</option>
+                                    <option value="1">Pago Mensual</option>
+                                    <option value="2">Pago Contado/Visa Net</option>
                                 </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="totalidad_fp">Totalidad</label>
+                                <input class="form-control" id="totalidad_fp" name="totalidad_fp" placeholder="Totalidad" type="text">
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="por_cuotas_m_fp">Por Cuotas Mensuales</label>
+                                <input class="form-control" id="por_cuotas_m_fp" name="por_cuotas_m_fp" placeholder="Por Cuotas Mensuales" type="text">
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="matricula">Matricula</label>
+                                <input class="form-control" id="matricula" name="matricula" placeholder="Matricula" type="text">
                             </div>
                         </div>
                     </div>
@@ -320,8 +331,8 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                      <input type="text" id="atentido" readonly class="form-control col-sm-3" name="atentido" placeholder="Atentido" value="">
-                    </div>
+                      <input type="text" id="atentido" readonly class="form-control col-sm-3" name="atentido" placeholder="Atentido" value="{{ Auth::user()->name }}">
+                       </div>
                 </div>
 
                 <div class="card-footer">
@@ -335,6 +346,5 @@
         </form>
 
 </div>
-
 
 @endsection('content')

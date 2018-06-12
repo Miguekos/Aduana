@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Alumno;
-use App\Tipodecurso;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 class AlumnoController extends Controller
 {
@@ -15,9 +14,9 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-//
+//        $alumnos = Membresia::paginate(10);
+
         $alumnos = Alumno::all ();
-//        $membresias = Membresia::paginate(10);
         return view ('alumnos.index', compact ('alumnos'));
     }
 
@@ -62,9 +61,10 @@ class AlumnoController extends Controller
      * @param  \App\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alumno $alumno)
+    public function edit($alumno)
     {
-        //
+        $alumnos = Alumno::find ($alumno);
+        return view ('alumnos.edit', compact ('alumnos'));
     }
 
     /**

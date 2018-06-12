@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ app()->getLocale() }}">
 
   <head>
     @include('templates.header')
@@ -25,11 +25,11 @@
 
         </main>
 
-        <aside class="aside-menu">
-    
-          @include('templates.slidesideright')
+        {{--<aside class="aside-menu">--}}
+    {{----}}
+          {{--@include('templates.slidesideright')--}}
 
-        </aside>
+        {{--</aside>--}}
 
       </div>
         @include('templates.footer')

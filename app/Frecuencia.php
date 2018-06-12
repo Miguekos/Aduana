@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Frecuencia extends Model
 {
+    protected $guarded = array();
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

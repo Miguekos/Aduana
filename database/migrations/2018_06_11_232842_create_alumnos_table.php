@@ -15,14 +15,15 @@ class CreateAlumnosTable extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('tipo_de_curso')->unsigned();
+            $table->integer('tipo_de_curso')->unsigned()->nullable();
             $table->foreign ('tipo_de_curso')->references('id')->on('tipodecursos');
-            $table->integer('horario')->unsigned();
+            $table->integer('horario')->unsigned()->nullable();
             $table->foreign('horario')->references('id')->on('horarios');
-            $table->date('fecha_de_inicio')->nullable();
-            $table->integer('frecuencia')->unsigned();
+            $table->string('definir_horas')->nullable();
+            $table->date('fecha_de_inicio')->nullable()->nullable();
+            $table->integer('frecuencia')->unsigned()->nullable();
             $table->foreign ('frecuencia')->references('id')->on('frecuencias');
-            $table->integer('modalidad')->unsigned();
+            $table->integer('modalidad')->unsigned()->nullable();
             $table->foreign ('modalidad')->references('id')->on('modalidads');
             $table->string('apellidos')->nullable();
             $table->string('nombre')->nullable();
@@ -45,8 +46,12 @@ class CreateAlumnosTable extends Migration
             $table->string('carrera_estudio')->nullable();
             $table->string('centro_laboral')->nullable();
             $table->string('direccion_laboral')->nullable();
-            $table->integer('formas_de_pago')->unsigned();
+            $table->integer('formas_de_pago')->unsigned()->nullable();
             $table->foreign('formas_de_pago')->references('id')->on('pagos');
+            $table->string('totalidad_fp')->nullable();
+            $table->string('por_cuotas_m_fp')->nullable();
+            $table->string('matricula')->nullable();
+            $table->string('fecha_de_pago_cronocrama')->nullable();
             $table->string('publicidad')->nullable();
             $table->string('razon_social_fac')->nullable();
             $table->integer('dni_fac')->nullable();

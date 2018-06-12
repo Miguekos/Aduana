@@ -27,4 +27,4 @@ Route::get('/black', 'HomeController@black')->name('black');
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');
 Route::resource ('alumno', 'AlumnoController');
-Route::resource ('membresia', 'MembresiaController');
+//Route::resource ('membresia', 'MembresiaController');

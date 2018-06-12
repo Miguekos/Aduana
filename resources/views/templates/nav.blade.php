@@ -3,8 +3,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="/home">
-        <img class="navbar-brand-full" src="coreui/img/brand/logo1.svg" width="89" height="25" alt="CoreUI Logo">
-        <img class="navbar-brand-minimized" src="coreui/img/brand/sygnet1.svg" width="30" height="30" alt="CoreUI Logo">
+        <img class="navbar-brand-full" src="{{ asset ('coreui/img/brand/logo1.svg') }}" width="89" height="25" alt="CoreUI Logo">
+        <img class="navbar-brand-minimized" src="{{ asset ('coreui/img/brand/sygnet1.svg') }}" width="30" height="30" alt="CoreUI Logo">
 
       </a>
       <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
@@ -12,10 +12,10 @@
       </button>
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3">
-          <a class="nav-link" href="#">Escritorio</a>
+          <a class="nav-link" href="{{ url ('/home') }}">Escritorio</a>
         </li>
         <li class="nav-item px-3">
-          <a class="nav-link" href="#">Usuarios</a>
+          <a class="nav-link" href="{{ route('register') }}">Usuarios</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link" href="#">Configuracion</a>

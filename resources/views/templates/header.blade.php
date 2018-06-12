@@ -16,7 +16,10 @@
     <link href="{{ asset('coreui/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('coreui/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.css') }}">
-
+    {{--datatable--}}
+    {{--<link href="{{ asset('coreui/table/dataTables.jqueryui.min.js') }}" rel="stylesheet">--}}
+    <link href="{{ asset('coreui/table/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/table/dataTables.jqueryui.min.css') }}" rel="stylesheet">
 
   
   

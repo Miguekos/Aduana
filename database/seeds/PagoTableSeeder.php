@@ -11,13 +11,11 @@ class PagoTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 3; $i++){
+        for ($i = 0; $i < 2; $i++){
             if ($i == 0){
-                $nombre = "Efectivo";
+                $nombre = "Pago Mensual";
             }elseif ($i == 1){
-                $nombre = "Debito";
-            }elseif ($i == 2){
-                $nombre = "Credito";
+                $nombre = "Pago Contado/Visa Net";
             }
             $pago = Pago::create ([
                 'nombre' => $nombre,
