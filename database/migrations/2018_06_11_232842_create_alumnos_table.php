@@ -53,6 +53,7 @@ class CreateAlumnosTable extends Migration
             $table->string('matricula')->nullable();
             $table->string('fecha_de_pago_cronocrama')->nullable();
             $table->string('publicidad')->nullable();
+            $table->string('publicidad_otros')->nullable();
             $table->string('razon_social_fac')->nullable();
             $table->string('dni_fac')->nullable();
             $table->string('telf_fac')->nullable();

@@ -52,8 +52,8 @@ class AlumnoController extends Controller
     public function show(Alumno $alumno)
     {
         $alumnos = Alumno::find($alumno);
-//        return $alumnos;
-        return "Estoy en show";
+        return $alumnos;
+
     }
 
     /**

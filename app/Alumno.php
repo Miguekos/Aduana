@@ -43,5 +43,10 @@ class Alumno extends Model
         $horarios = Horario::find($alumno);
         return $horarios->nombre;
     }
+    public function publicidad_id($alumno)
+    {
+        $publicida = Publicidad::find($alumno);
+        return $publicida->nombre;
+    }
 
 }
