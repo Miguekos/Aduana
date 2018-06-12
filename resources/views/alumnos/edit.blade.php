@@ -19,8 +19,9 @@
         }
     </style>
     <div class="col-lg-12">
-        <form action="{{ route ('alumno.update',$alumnos->id) }}" method="PUT">
+        <form action="{{ route ('alumno.update',$alumnos->id) }}" method="post">
             {{ csrf_field() }}
+            {{ method_field('PATCH') }}
 
             <div class="container-fluid">
                 <div class="animated fadeIn">

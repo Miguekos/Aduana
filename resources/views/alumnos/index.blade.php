@@ -43,10 +43,10 @@
                                 <td>{{ $alumno->nombre ." ". $alumno->apellidos }}</td>
                                 <td>{{ $alumno->dni }}</td>
                                 <td>{{ $alumno->fecha_de_inicio  }}</td>
-                                <td>{{ $alumno->tipos_cursos()  }}</td>
-                                <td>{{ $alumno->modalidad_nombre()  }}</td>
-                                <td>{{ $alumno->horarios()  }}</td>
-                                <td>{{ $alumno->frecuencias()  }}</td>
+                                <td>{{ $alumno->tipo_de_curso_id()  }}</td>
+                                <td>{{ $alumno->modalidad_id()  }}</td>
+                                <td>{{ $alumno->horario_id()  }}</td>
+                                <td>{{ $alumno->frecuencia_id()  }}</td>
                                 <td>
                                     <a type="" href="{{ route ('alumno.show', $alumno->id) }}" class="badge badge-success"> Ver</a>
                                     <a type="" href="{{ route ('alumno.edit', $alumno->id) }}" class="badge badge-warning"> Editar</a>

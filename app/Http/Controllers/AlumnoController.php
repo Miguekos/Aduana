@@ -52,7 +52,8 @@ class AlumnoController extends Controller
     public function show(Alumno $alumno)
     {
         $alumnos = Alumno::find($alumno);
-        return $alumnos;
+//        return $alumnos;
+        return "Estoy en show";
     }
 
     /**
@@ -74,9 +75,11 @@ class AlumnoController extends Controller
      * @param  \App\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alumno $alumno)
+    public function update(Request $request, $alumno)
     {
-        //
+        $alumnos = Alumno::create ($request->all ());
+//        return view ('alumnos.show',compact ('alumno'));
+        return redirect ()->route ('alumno.index');
     }
 
     /**
