@@ -36,7 +36,7 @@
                     <i class="nav-icon fa fa-check-square"></i> Alumnos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route ('alumno.index') }}">
+                  <a class="nav-link" href="{{ route ('reporte') }}">
                     <i class="nav-icon fa fa-table"></i> Reportes</a>
                 </li>
               </ul>

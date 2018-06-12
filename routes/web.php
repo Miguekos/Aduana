@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/black', 'HomeController@black')->name('black');
+Route::get('/reporte', 'HomeController@reporte')->name('reporte');
 
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');

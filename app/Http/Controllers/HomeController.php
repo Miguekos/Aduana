@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Alumno;
+use App\Tipodecurso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -32,5 +35,28 @@ class HomeController extends Controller
 
     public function black(){
         return view('profile');
+    }
+
+    public function reporte(){
+        $alumnos = Alumno::all ();
+        $tipos_cursos = Tipodecurso::all ();
+
+        $suma_alumnos = Alumno::where('formas_de_pago','=',1)->sum('id');
+        echo $suma_alumnos;
+
+        $curso1 = Alumno::where('tipo_de_curso', '=', 1)->count();
+        echo $curso1;
+        $curso2 = Alumno::where('tipo_de_curso', '=', 2)->count();
+        echo $curso2;
+        $curso3 = Alumno::where('tipo_de_curso', '=', 3)->count();
+        echo $curso3;
+        $curso4 = Alumno::where('tipo_de_curso', '=', 4)->count();
+        echo $curso4;
+        $curso5 = Alumno::where('tipo_de_curso', '=', 5)->count();
+        echo $curso5;
+        $curso6 = Alumno::where('tipo_de_curso', '=', 6)->count();
+        echo $curso6;
+
+//        return view ('alumnos.reporte',compact ('$alumnos','tipos_cursos'));
     }
 }
