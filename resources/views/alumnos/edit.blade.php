@@ -213,7 +213,7 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="dni">Telf. Fijo (Apoderado)</label>
-                                <input class="form-control" id="telf_fijo_apo" value="value="{{ $alumnos->telf_fijo_apo }}"" name="telf_fijo_apo" placeholder="" type="text">
+                                <input class="form-control" id="telf_fijo_apo" value="{{ $alumnos->telf_fijo_apo }}" name="telf_fijo_apo" placeholder="" type="text">
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="dni">Celular (Apoderado)</label>
@@ -345,10 +345,9 @@
                             <button type="reset" class="btn btn-sm btn-danger">
                                 <i class="fa fa-ban"></i> Limpiar</button>
                         </div>
-
                     </div>
         </form>
 
-    </div>
 
+    </div>
 @endsection('content')
