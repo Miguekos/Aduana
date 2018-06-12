@@ -31,6 +31,6 @@ class HomeController extends Controller
     }
 
     public function black(){
-        return view('black');
+        return view('profile');
     }
 }
