@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v2.0.0
-* @link https://coreui.io
-* Copyright (c) 2018 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
-
-<html lang="en">
-  <head>
+<html lang="{{ app()->getLocale() }}">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
+    <meta name="author" content="Miguel Rodriguez">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Aduana | Escuela</title>
+    <title>Aduana | Loguin</title>
     <!-- Icons-->
-    <link href="coreui/node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
-    <link href="coreui/node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-    <link href="coreui/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="coreui/node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <link href="{{ asset('coreui/node_modules/@coreui/icons/css/coreui-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
     <!-- Main styles for this application-->
-    <link href="coreui/css/style.css" rel="stylesheet">
-    <link href="coreui/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-  </head>
+    <link href="{{ asset('coreui/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.css') }}">
+    {{--datatable--}}
+    {{--<link href="{{ asset('coreui/table/dataTables.jqueryui.min.js') }}" rel="stylesheet">--}}
+    <link href="{{ asset('coreui/table/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('coreui/table/dataTables.jqueryui.min.css') }}" rel="stylesheet">
+    <head>
   <body class="app flex-row align-items-center">
     <div class="container">
       <div class="row justify-content-center">

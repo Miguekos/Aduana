@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+@include('templates.header')
 
-  <head>
-    @include('templates.header')
-  </head>
 
   <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
   
