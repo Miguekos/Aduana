@@ -30,7 +30,8 @@ class HomeController extends Controller
     }
 
     public function hola(){
-        return view('hola');
+        return view('export.xportalumnos');
+//        return "si entro";
     }
 
     public function black(){

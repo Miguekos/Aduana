@@ -3,16 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Console\PackageDiscoverCommand;
 
 class Alumno extends Model
 {
 //     protected $table = 'alumnos';
     protected $guarded = array();
-//    protected $fillable = ['nombre','dni'];
-//    public function tipodecursos(){
-//      return $this->belongsTo(Tipodecurso::class);
-//    }
 
     public function tipo_de_curso_id($alumno)
     {
@@ -48,5 +43,7 @@ class Alumno extends Model
         $publicida = Publicidad::find($alumno);
         return $publicida->nombre;
     }
+
+
 
 }

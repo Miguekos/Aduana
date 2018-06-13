@@ -256,6 +256,12 @@
                             <strong>Forma de Pago</strong>
                             <small>Datos</small>
                         </div>
+
+
+
+
+
+
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
@@ -285,6 +291,10 @@
                             </div>
                         </div>
 
+
+
+
+
                         <div class="card-header">
                             <strong>Otros</strong>
                             <small>Datos</small>
@@ -294,11 +304,19 @@
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label for="dni">Medio por el cual se entero de Nosotros</label>
-                                        <input class="form-control" id="publicidad" value="{{ $alumnos->publicidad }}" name="publicidad" placeholder="" type="text">
+                                        <select class="form-control" name="publicidad" id="publicidad">
+                                            <option value="{{ $alumnos->publicidad }}">{{ $alumnos->publicidad_id($alumnos->publicidad) }}</option>
+                                            <option value="1">En el local</option>
+                                            <option value="2">Via E-mail</option>
+                                            <option value="3">Facebook</option>
+                                            <option value="4">Amigos</option>
+                                            <option value="5">Twitter</option>
+                                            <option value="">Otros</option>
+                                        </select>
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <label for="dni">Sugerencias</label>
-                                        <input class="form-control" id="" name="" placeholder="" type="text">
+                                        <label for="dni">Otros medios</label>
+                                        <input class="form-control" id="publicidad_otros" name="publicidad_otros" placeholder="" type="text">
                                     </div>
                                 </div>
 

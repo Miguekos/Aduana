@@ -17,10 +17,12 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+Route::get('/export-users', 'ExcelController@exportUsers');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/hola', 'HomeController@hola')->name('hola');
 Route::get('/black', 'HomeController@black')->name('black');
 Route::get('/reporte', 'HomeController@reporte')->name('reporte');
 
