@@ -69,6 +69,7 @@
             <div class="card">
               <div class="card-body">
 
+            @include('templates.grafica')
 
 
               </div>

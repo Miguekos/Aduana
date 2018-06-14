@@ -35,10 +35,10 @@
                   <a class="nav-link" href="{{ route ('alumno.index') }}">
                     <i class="nav-icon fa fa-check-square"></i> Alumnos</a>
                 </li>
-                {{--<li class="nav-item">
+                <li class="nav-item">
                   <a class="nav-link" href="{{ route ('reporte') }}">
                     <i class="nav-icon fa fa-table"></i> Reportes</a>
-                </li>--}}
+                </li>
               </ul>
             </li>
               <li class="nav-item nav-dropdown">
