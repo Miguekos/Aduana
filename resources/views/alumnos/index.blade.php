@@ -48,7 +48,7 @@
                                 <td>{{ $alumnos->horario_id($alumnos->horario)  }}</td>
                                 <td>{{ $alumnos->frecuencia_id($alumnos->frecuencia)  }}</td>
                                 <td>
-                                    {{--<a type="" href="{{ route ('alumno.show', $alumnos->id) }}" class="badge badge-success"> Ver</a>--}}
+                                    <a type="" href="{{ url ('/get', $alumnos->id) }}" class="badge badge-success"> Ver</a>
                                     <a type="" href="{{ route ('alumno.edit', $alumnos->id) }}" class="badge badge-warning"> Editar</a>
                                 </td>
 

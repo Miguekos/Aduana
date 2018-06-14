@@ -315,8 +315,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <label for="dni">Otros medios</label>
-                                        <input class="form-control" id="publicidad_otros" name="publicidad_otros" placeholder="" type="text">
+                                        <label for="publicidad_otros">Otros medios</label>
+                                        <input class="form-control" id="publicidad_otros" value="{{ $alumnos->publicidad_otros }}" name="publicidad_otros" placeholder="" type="text">
                                     </div>
                                 </div>
 
@@ -354,7 +354,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <input type="text" id="atentido" value="{{ $alumnos->atendido }}" readonly class="form-control col-sm-3" name="atentido" placeholder="Atentido">
+                                {{--<input type="hidden" id="atentido" value="{{ $alumnos->atendido }}" readonly class="form-control col-sm-3" name="atendido" placeholder="Atentido">--}}
                             </div>
                         </div>
 
