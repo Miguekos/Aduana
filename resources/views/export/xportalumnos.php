@@ -15,10 +15,8 @@ $fechaA = date("Y-m-d_g:i_a");
 $nombre = "Clientes_".$fechaA.".xlsx";
 // echo "$nombre";
 
-$id = 1;
-
 $conexion = new mysqli($server,$name_db,$pass_db,$db);
-$sql = "SELECT * FROM alumnos where id = '$id'";
+$sql = "SELECT * FROM alumnos where id = '$num'";
 
 $resultado = mysqli_query($conexion, $sql);
 //$registros = mysqli_fetch_row($resultado);

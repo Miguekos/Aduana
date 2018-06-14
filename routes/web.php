@@ -21,6 +21,7 @@ Route::get('/export-users', 'ExcelController@exportUsers');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/get/{id}', 'HomeController@get')->name('get');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/hola', 'HomeController@hola')->name('hola');
 Route::get('/black', 'HomeController@black')->name('black');

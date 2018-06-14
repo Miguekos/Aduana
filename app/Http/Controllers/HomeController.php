@@ -29,9 +29,10 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function hola(){
-        return view('export.xportalumnos');
-//        return "si entro";
+    public function get($id){
+        $num = $id;
+        return view('export.xportalumnos',compact ('num'));
+
     }
 
     public function black(){
@@ -60,4 +61,5 @@ class HomeController extends Controller
 
 //        return view ('alumnos.reporte',compact ('$alumnos','tipos_cursos'));
     }
+
 }
