@@ -21,6 +21,7 @@ class CreateAlumnosTable extends Migration
             $table->foreign('horario')->references('id')->on('horarios');
             $table->string('definir_horas')->nullable();
             $table->date('fecha_de_inicio')->nullable()->nullable();
+            $table->string('frecuencia_otros')->nullable();
             $table->integer('frecuencia')->unsigned()->nullable();
             $table->foreign ('frecuencia')->references('id')->on('frecuencias');
             $table->integer('modalidad')->unsigned()->nullable();

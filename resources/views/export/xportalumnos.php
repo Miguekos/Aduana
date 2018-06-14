@@ -36,21 +36,59 @@ $resultado = mysqli_query($conexion, $sql);
     getProperties()
         ->setCreator("miguekos1233@gmail.com")
         ->setLastModifiedBy("miguekos1233@gmail.com")
-        ->setTitle("Exportar excel desde mysql")
-        ->setSubject("Deudores")
+        ->setTitle("Laravel-Excel")
+        ->setSubject("Planilla")
         ->setDescription("Documento generado con PHPExcel")
         ->setKeywords("miguekos1233@gmail.com  con  phpexcel")
-        ->setCategory("Clientes");
+        ->setCategory("Plantilla");
 
     // Renombrar Pestaña
-    $objPHPExcel->getActiveSheet()->setTitle('Deudores');
+    $objPHPExcel->getActiveSheet()->setTitle('Planilla');
 
 
     while ($registro = mysqli_fetch_object($resultado)) {
+        $hora_nombre = $registro->horario;
+        $frec_nombre = $registro->frecuencia;
+        $curso_nombre = $registro->tipo_de_curso;
+        $moda_nombre = $registro->modalidad;
+        $pago_nombre = $registro->formas_de_pago;
+        $publi_nombre = $registro->publicidad;
+
+        $modalidad = "select * from modalidads where id = '$moda_nombre'";
+        $modalidad = mysqli_query($conexion, $modalidad);
+        $modalidad = mysqli_fetch_object($modalidad);
+
+        $hora = "select * from horarios where id = '$hora_nombre'";
+        $hora = mysqli_query($conexion, $hora);
+        $hora = mysqli_fetch_object($hora);
+
+        $frecuencia = "select * from frecuencias where id = '$frec_nombre'";
+        $frecuencia = mysqli_query($conexion, $frecuencia);
+        $frecuencia = mysqli_fetch_object($frecuencia);
+
+        $curso = "select * from tipodecursos where id = '$curso_nombre'";
+        $curso = mysqli_query($conexion, $curso);
+        $curso = mysqli_fetch_object($curso);
+
+        $pago = "select * from pagos where id = '$pago_nombre'";
+        $pago = mysqli_query($conexion, $pago);
+        $pago = mysqli_fetch_object($pago);
+
+        $publi = "select * from publicidads where id = '$publi_nombre'";
+        $publi = mysqli_query($conexion, $publi);
+        $publi = mysqli_fetch_object($publi);
+
 
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('H'.'9', $registro->frecuencia_id($registro->frecuencia_id))
-            ->setCellValue('H'.'9', $registro->fecha_de_inicio)
+            ->setCellValue('A'.'7', $curso->nombre)
+            ->setCellValue('A'.'10', $hora->nombre)
+            ->setCellValue('C'.'10', $registro->definir_horas)
+            ->setCellValue('A'.'16', $modalidad->nombre)
+            ->setCellValue('A'.'13', $frecuencia->nombre)
+            ->setCellValue('A'.'35', $pago->nombre)
+            ->setCellValue('A'.'39', $publi->nombre)
+            ->setCellValue('G'.'39', $registro->publicidad_otros)
+            ->setCellValue('H'.'10', $registro->fecha_de_inicio)
             ->setCellValue('B'.'19', $registro->nombre)
             ->setCellValue('F'.'19', $registro->apellidos)
             ->setCellValue('B'.'20', $registro->direccion)
@@ -72,20 +110,17 @@ $resultado = mysqli_query($conexion, $sql);
             ->setCellValue('C'.'30', $registro->carrera_estudio)
             ->setCellValue('C'.'31', $registro->centro_laboral)
             ->setCellValue('C'.'32', $registro->direccion_laboral)
-            ->setCellValue('C'.'35', $registro->formas_de_pago)
             ->setCellValue('A'.'36', $registro->totalidad_fp)
             ->setCellValue('D'.'36', $registro->por_cuotas_m_fp)
             ->setCellValue('F'.'36', $registro->matricula)
             ->setCellValue('H'.'36', $registro->fecha_de_pago_cronocrama)
-            ->setCellValue('G'.'40', $registro->publicidad)
-            ->setCellValue('C'.'49', $registro->razon_social_fac)
-            ->setCellValue('B'.'50', $registro->dni_fac)
-            ->setCellValue('F'.'50', $registro->telf_fac)
-            ->setCellValue('B'.'51', $registro->direccion_fac)
-            ->setCellValue('C'.'54', $registro->atentido)
-            ->setCellValue('G'.'40', $registro->dni);
+            ->setCellValue('C'.'48', $registro->razon_social_fac)
+            ->setCellValue('B'.'49', $registro->dni_fac)
+            ->setCellValue('F'.'49', $registro->telf_fac)
+            ->setCellValue('B'.'50', $registro->direccion_fac)
+            ->setCellValue('C'.'53', $registro->atentido)
+            ->setCellValue('G'.'69', $registro->dni);
 ;
-
     }
 
 header('Content-Type: application/vnd.ms-excel');
