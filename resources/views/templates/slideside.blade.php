@@ -35,13 +35,18 @@
                   <a class="nav-link" href="{{ route ('alumno.index') }}">
                     <i class="nav-icon fa fa-check-square"></i> Alumnos</a>
                 </li>
-                <li class="nav-item">
+                {{--<li class="nav-item">
                   <a class="nav-link" href="{{ route ('reporte') }}">
                     <i class="nav-icon fa fa-table"></i> Reportes</a>
-                </li>
+                </li>--}}
               </ul>
             </li>
-            <li class="nav-item nav-dropdown">
+              <li class="nav-item nav-dropdown">
+                  <a class="nav-link" href="#">
+                      <i class="nav-icon fa fa-handshake-o"></i> Asistencia
+                  </a>
+              </li>
+            {{--<li class="nav-item nav-dropdown">
               <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon fa fa-handshake-o"></i> Profesores</a>
               <ul class="nav-dropdown-items">
@@ -50,7 +55,7 @@
                     <i class="nav-icon icon-arrow-right"></i> Profesores</a>
                 </li>
               </ul>
-            </li>
+            </li>--}}
 
 
           </ul>

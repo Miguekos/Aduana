@@ -47,9 +47,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                      <input type="text" class="form-control" name="tipo_de_curso" placeholder="Tipo de Curso (Otros)">
-                                    </div> -->
+                                    <div class="form-group">
+                                        <input type="text" id="frecuencia_otros" value="{{ $alumnos->frecuencia_otros }}" class="form-control" name="frecuencia_otros" placeholder="Otros (Especificar)">
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                 </div>

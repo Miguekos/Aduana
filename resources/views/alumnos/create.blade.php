@@ -73,9 +73,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <!-- <div class="form-group">
-                                  <input type="text" class="form-control" name="frecuencia" placeholder="Otros (Especificar)">
-                                </div> -->
+                                <div class="form-group">
+                                  <input type="text" id="frecuencia_otros" class="form-control" name="frecuencia_otros" placeholder="Otros (Especificar)">
+                                </div>
                             </div>
                             <div class="card-footer">
                             </div>
