@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Aduana | Asistencia</title>
 
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="asis/AdminLTE.min.css" rel="stylesheet">
+    <link href="asis/bootstrap.min.css" rel="stylesheet">
+    <link href="asis/w3.css" rel="stylesheet">
 
 </head>
 
 
-<body class="sidebar-mini skin-yellow" >
+<body class="">
 
 
 <section class="content" style="padding-top: 0px; padding-bottom: 0px;">

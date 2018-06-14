@@ -131,7 +131,7 @@ mysqli_select_db($con,"sd");
         //print_r($sql);
         $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)) {
-            $namee = "<h1>".$row['nombre']."</h1>";
+            $namee = "<h1 class='text-center'><b>".$row['nombre']."</b></h1>";
             $fecha_inicio = $row['fecha_de_inicio'];
 
 
