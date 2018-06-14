@@ -26,6 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/hola', 'HomeController@hola')->name('hola');
 Route::get('/black', 'HomeController@black')->name('black');
 Route::get('/reporte', 'HomeController@reporte')->name('reporte');
+Route::get('/asistencia', 'AsistenciaController@index')->name('asistencia');
+Route::get('/addassistance/{id}', 'AsistenciaController@addassistance')->name('addassistance');
+
+
 
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');

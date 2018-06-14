@@ -42,7 +42,7 @@
               </ul>
             </li>
               <li class="nav-item nav-dropdown">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ url ('/asistencia') }}" target="_blank">
                       <i class="nav-icon fa fa-handshake-o"></i> Asistencia
                   </a>
               </li>
