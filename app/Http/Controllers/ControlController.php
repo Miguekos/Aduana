@@ -25,9 +25,9 @@ class ControlController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($control)
     {
-        //
+
     }
 
     /**
@@ -93,5 +93,12 @@ class ControlController extends Controller
     public function destroy(Control $control)
     {
         //
+    }
+
+    public function addNotas($id, $control)
+    {
+        $alumnos = Alumno::find($id);
+        $materias = Materia::find($control);
+        return view ('control.notas',compact ('controls','alumnos','materias'));
     }
 }

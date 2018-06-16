@@ -37,4 +37,6 @@ Route::resource ('alumno', 'AlumnoController');
 Route::resource ('materia', 'MateriaController');
 Route::resource ('teacher', 'TeacherController');
 Route::resource ('control', 'ControlController');
+Route::resource ('nota', 'NotaController');
+Route::get('/addnotas/{id}/{control}', 'ControlController@addNotas')->name('addnotas');
 //Route::resource ('membresia', 'MembresiaController');

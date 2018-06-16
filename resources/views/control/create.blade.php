@@ -19,10 +19,8 @@
 }
 </style>
 <div class="col-lg-12">
-
         <form action="{{ route('control.store') }}" method="POST">
             {{ csrf_field() }}
-
             <div class="container-fluid">
               <div class="animated fadeIn">
                 <div class="row">
@@ -54,6 +52,6 @@
               </div>
             </div>
             <input type="hidden" name="id_alumno" value="{{ $alumno->id }}">
-        </form>>
-
-@endsection('content')
+        </form>
+</div>
+@endsection()

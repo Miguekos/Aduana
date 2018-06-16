@@ -24,13 +24,13 @@
                     {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
                     <table id="table_id" class="table compact display table-sm">
                         <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Nombre</th>
-                          <th>DNI</th>
-                          <th>Fecha Inicio</th>
-                          <th>Accion</th>
-                        </tr>
+                            <tr>
+                              <th>#</th>
+                              <th>Nombre</th>
+                              <th>DNI</th>
+                              <th>Fecha Inicio</th>
+                              <th>Accion</th>
+                            </tr>
                         </thead>
                         <tbody>
                         @foreach($control as $controls)
@@ -43,17 +43,12 @@
                                     <a type="" href="{{ route ('control.show', $controls->id) }}" class="badge badge-success"> Ver</a>
                                     <a type="" href="{{ route ('control.edit', $controls->id) }}" class="badge badge-warning"> Asignar  Materias</a>
                                 </td>
-
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    <?php
-//                        echo str_replace('/?','?', $controls->render());
-                    ?>
-
                 </div>
             </div>
         </div>
 
-@endsection('content')
+@endsection()

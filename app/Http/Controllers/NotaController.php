@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Nota;
 use Illuminate\Http\Request;
+use Mockery\Matcher\Not;
 
 class NotaController extends Controller
 {
@@ -24,7 +25,7 @@ class NotaController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -46,7 +47,7 @@ class NotaController extends Controller
      */
     public function show(Nota $nota)
     {
-        //
+
     }
 
     /**
@@ -55,9 +56,10 @@ class NotaController extends Controller
      * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function edit(Nota $nota)
+    public function edit($nota)
     {
-        //
+        $notas = Nota::find ($nota);
+        return $nota;
     }
 
     /**
