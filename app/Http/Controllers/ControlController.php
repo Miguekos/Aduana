@@ -98,7 +98,7 @@ class ControlController extends Controller
     public function addNotas($id, $control)
     {
         $alumnos = Alumno::find($id);
-        $materias = Materia::find($control);
-        return view ('control.notas',compact ('controls','alumnos','materias'));
+        $materias = Control::find($control);
+        return view ('control.notas',compact ('alumnos','materias'));
     }
 }

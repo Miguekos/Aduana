@@ -5,7 +5,10 @@
 
 
 
-    {{ $controls-> }}
+    estoy en control nota
+
+    {{ $alumnos->nombre }}
+    {{ $materias->materia }}
 
 
 

@@ -26,7 +26,7 @@
                         <td>{{ $materias->id }}</td>
                         <td>{{ $materias->materia }}</td>
                         <td>
-                            <a type="" href="{{ route ('control.edit', $materias->id) }}" class="badge badge-success"> Agregar notas</a>
+                            <a type="" href="{{ url ('/addnotas/{id}/{control}'),$alumno->id, $materias->id }}" class="badge badge-success"> Agregar notas</a>
                         </td>
                     </tr>
                 @endforeach
