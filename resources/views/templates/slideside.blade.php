@@ -37,7 +37,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route ('reporte') }}">
-                    <i class="nav-icon fa fa-table"></i> Reportes</a>
+                    <i class="nav-icon fa fa-table"></i> Registro de asistencia</a>
                 </li>
               </ul>
             </li>
@@ -51,16 +51,11 @@
                       <i class="nav-icon fa fa-handshake-o"></i> Materias
                   </a>
               </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon fa fa-handshake-o"></i> Profesores</a>
-              <ul class="nav-dropdown-items">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="nav-icon icon-arrow-right"></i> Profesores</a>
-                </li>
-              </ul>
-            </li>
+              <li class="nav-item nav-dropdown">
+                  <a class="nav-link" href="{{ route ('teacher.index') }}">
+                      <i class="nav-icon fa fa-handshake-o"></i> Profesores
+                  </a>
+              </li>
 
 
           </ul>

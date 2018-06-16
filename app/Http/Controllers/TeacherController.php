@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Materia;
 use App\Teacher;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        $teacher = Teacher::all();
+        return view('teachers.index', compact ('teacher'));
     }
 
     /**
@@ -24,7 +25,8 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
+      $materia = Materia::all();
+        return view('teachers.create', compact ('materia'));
     }
 
     /**
@@ -35,7 +37,8 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teacher = Teacher::create($request->all());
+        return redirect()->route('teacher.index');
     }
 
     /**
