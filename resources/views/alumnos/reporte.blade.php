@@ -37,7 +37,7 @@ $result = mysqli_query($con,$sql);
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            <i class="fa fa-align-justify"></i> Alumnos <a class="btn btn-sm btn-primary pull-right" href="{{ route('alumno.create') }}">Agregar Alumno</a>
+            <i class="fa fa-align-justify"></i> Reportes de Asistencia
         </div>
         <div class="card-body">
             {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}

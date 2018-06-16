@@ -102,3 +102,30 @@ $table->string('telf_fac');
 $table->string('direccion_fac');
 $table->string('atentido');
 $table->timestamps();
+
+
+CREATE TABLE `assistance` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`kind_id` INT(11) NULL DEFAULT NULL,
+	`date_at` VARCHAR(100) NOT NULL,
+	`person_id` INT(11) NOT NULL,
+	`user_id` INT(11) NOT NULL,
+	`total_asis` INT(10) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=454
+;
+
+CREATE TABLE `grafica` (
+	`ID` INT(11) NOT NULL AUTO_INCREMENT,
+	`valor` INT(11) NOT NULL,
+	`tiempo` VARCHAR(10) NOT NULL,
+	`dia` VARCHAR(12) NOT NULL,
+	PRIMARY KEY (`ID`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=10
+;

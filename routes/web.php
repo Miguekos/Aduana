@@ -34,4 +34,5 @@ Route::get('/addassistance/{id}', 'AsistenciaController@addassistance')->name('a
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');
 Route::resource ('alumno', 'AlumnoController');
+Route::resource ('materia', 'MateriaController');
 //Route::resource ('membresia', 'MembresiaController');

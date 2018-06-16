@@ -23,4 +23,3 @@
     <link href="{{ asset('coreui/table/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('coreui/table/dataTables.jqueryui.min.css') }}" rel="stylesheet">
 <head>
-  

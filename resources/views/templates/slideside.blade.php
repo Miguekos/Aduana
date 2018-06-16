@@ -46,7 +46,12 @@
                       <i class="nav-icon fa fa-handshake-o"></i> Asistencia
                   </a>
               </li>
-            {{--<li class="nav-item nav-dropdown">
+              <li class="nav-item nav-dropdown">
+                  <a class="nav-link" href="{{ route ('materia.index') }}">
+                      <i class="nav-icon fa fa-handshake-o"></i> Materias
+                  </a>
+              </li>
+            <li class="nav-item nav-dropdown">
               <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon fa fa-handshake-o"></i> Profesores</a>
               <ul class="nav-dropdown-items">
@@ -55,7 +60,7 @@
                     <i class="nav-icon icon-arrow-right"></i> Profesores</a>
                 </li>
               </ul>
-            </li>--}}
+            </li>
 
 
           </ul>

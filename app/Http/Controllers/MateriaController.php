@@ -14,7 +14,8 @@ class MateriaController extends Controller
      */
     public function index()
     {
-        //
+      $materia = Materia::all();
+      return view('materias.index',compact('materia'));
     }
 
     /**
@@ -24,7 +25,7 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        //
+      return view('materias.create');
     }
 
     /**
@@ -35,7 +36,9 @@ class MateriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $materia = Materia::create($request->all());
+        return redirect()->route('materia.index');
+
     }
 
     /**
