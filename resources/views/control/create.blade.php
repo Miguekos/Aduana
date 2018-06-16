@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Alumnos')
-@section('pagina', 'Nuevo Alumnos')
+@section('title', 'Asignar Cursos')
+@section('pagina', '')
 
 @section('content')
 
@@ -34,8 +34,13 @@
                       </div>
                       <div class="card-body">
                         <div class="form-group">
-                          <label for="nombre_materia">Materia</label>
-                          <input type="text" class="form-control" name="nombre_materia" id="nombre_materia" >
+                          <label for="materia">Materia</label>
+                          <select class="form-control" name="materia" id="materia">
+                            <option value="">---Elige una Materia---</option>
+                            @foreach ($materia as $materias)
+                            <option value="{{ $materias->nombre_materia }}">{{ $materias->nombre_materia }}</option>
+                            @endforeach
+                          </select>
                         </div>
                       </div>
                       <div class="card-footer">
