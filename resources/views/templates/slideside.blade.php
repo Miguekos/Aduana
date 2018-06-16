@@ -56,6 +56,11 @@
                       <i class="nav-icon fa fa-handshake-o"></i> Profesores
                   </a>
               </li>
+              <li class="nav-item nav-dropdown">
+                  <a class="nav-link" href="{{ route ('control.index') }}">
+                      <i class="nav-icon fa fa-handshake-o"></i> Control
+                  </a>
+              </li>
 
 
           </ul>

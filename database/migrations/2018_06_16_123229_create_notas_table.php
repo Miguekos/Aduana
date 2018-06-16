@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateControlsTable extends Migration
+class CreateNotasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateControlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('controls', function (Blueprint $table) {
+        Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_alumno');
-            $table->string('materia')->nullable();
+            $table->string ('id_alumno')->nullable();
+            $table->string ('id_materia')->nullable();
+            $table->integer ('nota')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateControlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('controls');
+        Schema::dropIfExists('notas');
     }
 }

@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Control;
-use App\Alumno;
-use App\Materia;
+use App\Nota;
 use Illuminate\Http\Request;
 
-class ControlController extends Controller
+class NotaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class ControlController extends Controller
      */
     public function index()
     {
-        $control = Alumno::all();
-        return view('control.index', compact ('control'));
+        //
     }
 
     /**
@@ -38,46 +35,39 @@ class ControlController extends Controller
      */
     public function store(Request $request)
     {
-        $control = Control::create($request->all ());
-        return redirect ()->route('control.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Control  $control
+     * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function show($control)
+    public function show(Nota $nota)
     {
-        $control = Control::find($control);
-        $alumno = Alumno::find($control);
-
-        return view ('control.show',compact ('control', 'alumno'));
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Control  $control
+     * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function edit($control)
+    public function edit(Nota $nota)
     {
-        $alumno = Alumno::find($control);
-        $materia = Materia::all();
-        return view('control.create', compact ('alumno', 'materia'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Control  $control
+     * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Control $control)
+    public function update(Request $request, Nota $nota)
     {
         //
     }
@@ -85,10 +75,10 @@ class ControlController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Control  $control
+     * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Control $control)
+    public function destroy(Nota $nota)
     {
         //
     }

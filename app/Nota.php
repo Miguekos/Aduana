@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Control extends Model
+class Nota extends Model
 {
-    protected $guarded = array();
+    //
 }

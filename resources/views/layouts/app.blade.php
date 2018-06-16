@@ -1,7 +1,7 @@
 @include('templates.header')
 
-  <!-- <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show"> -->
-  <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show brand-minimized sidebar-minimized">
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+  {{--<body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show brand-minimized sidebar-minimized">--}}
 
 
       <header class="app-header navbar">

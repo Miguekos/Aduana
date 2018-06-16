@@ -20,7 +20,7 @@
 </style>
 <div class="col-lg-12">
 
-        <form action="{{ route('materia.store') }}" method="POST">
+        <form action="{{ route('control.store') }}" method="POST">
             {{ csrf_field() }}
 
             <div class="container-fluid">
@@ -29,8 +29,7 @@
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-header">
-                        <strong>Materia</strong>
-                        Datos
+                        Asignar materias para <strong><h1>{{ $alumno->nombre . " " . $alumno->apellidos }}</h1></strong>
                       </div>
                       <div class="card-body">
                         <div class="form-group">
@@ -54,5 +53,7 @@
                 </div>
               </div>
             </div>
+            <input type="hidden" name="id_alumno" value="{{ $alumno->id }}">
+        </form>>
 
 @endsection('content')
