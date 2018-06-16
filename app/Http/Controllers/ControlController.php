@@ -50,11 +50,13 @@ class ControlController extends Controller
      */
     public function show($control)
     {
-        $control = Control::find($control);
-        $alumno = Alumno::find($control);
+        $controls = Control::all()->where ('id_alumno',$control);
+        $alumno = Alumno::findOrFail($control);
 
-        return view ('control.show',compact ('control', 'alumno'));
-
+        //dd ($alumno);
+        //dd ($controls);
+       return view ('control.show',compact ('controls','alumno'));
+       // return $control;
     }
 
     /**

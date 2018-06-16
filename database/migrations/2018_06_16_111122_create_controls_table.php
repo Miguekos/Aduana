@@ -15,7 +15,7 @@ class CreateControlsTable extends Migration
     {
         Schema::create('controls', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_alumno');
+            $table->integer('id_alumno')->nullable();
             $table->string('materia')->nullable();
             $table->timestamps();
         });
