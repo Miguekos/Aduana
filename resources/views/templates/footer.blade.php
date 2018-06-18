@@ -17,13 +17,17 @@
     <script src="{{ asset('coreui/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('coreui/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
     <!-- Plugins and scripts required by this view-->
-    <script src="{{ asset('coreui/node_modules/chart.js/dist/Chart.min.js') }}"></script>
+    {{--<script src="{{ asset('coreui/node_modules/chart.js/dist/Chart.min.js') }}"></script>--}}
 
     <script src="{{ asset('coreui/node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
-    <script src="{{ asset('coreui/js/main.js') }}"></script>
+    {{--<script src="{{ asset('coreui/js/main.js') }}"></script>--}}
     <script type="text/javascript" charset="utf8" src="{{ asset('coreui/js/jquery.dataTables.js') }}"></script>
 
-    <script src="{{ asset('coreui/table/dataTables.jqueryui.min.js') }}"></script>
+    {{--<script src="{{ asset('coreui/table/dataTables.jqueryui.min.js') }}"></script>--}}
+
+    <script src="{{ asset('coreui/table/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('coreui/table/dataTables.semanticui.min.js') }}"></script>
+    <script src="{{ asset('coreui/table/semantic.min.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

@@ -11,7 +11,8 @@
                     <i class="fa fa-align-justify"></i> Alumnos <a class="btn btn-sm btn-primary pull-right" href="{{ route('membresia.create') }}">Agregar Alumno</a>
                 </div>
                 <div class="card-body">
-                    <table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">
+                    {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
+                    <table id="table_id" class="ui celled table" style="width:100%">
                     {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
                         <thead>
                         <tr>

@@ -14,7 +14,8 @@
         <div class="card-body">
             {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
             {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
-            <table id="table_id" class="table compact display table-sm">
+            <table id="table_id" class="ui celled table" style="width:100%">
+            {{--<table id="table_id" class="table compact display table-sm">--}}
                 <thead>
                 <tr>
                     <th>#</th>
@@ -28,7 +29,7 @@
                         <td>{{ $materias->id }}</td>
                         <td>{{ $materias->nombre_materia }}</td>
                         <td>
-
+                            <a type="" href="#" class="btn btn-sm btn-warning"> Editar</a>
                         </td>
 
                     </tr>

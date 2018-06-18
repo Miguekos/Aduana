@@ -22,7 +22,8 @@
                 <div class="card-body">
                     {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
                     {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
-                    <table id="table_id" class="table compact display table-sm">
+                    {{--<table id="table_id" class="table compact display table-sm">--}}
+                    <table id="table_id" class="ui celled table" style="width:100%">
                         <thead>
                             <tr>
                               <th>#</th>
@@ -40,8 +41,8 @@
                               <td>{{ $controls->dni }}</td>
                               <td>{{ $controls->fecha_de_inicio }}</td>
                                 <td>
-                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="badge badge-success"> Ver Materias</a>
-                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="badge badge-warning"> Asignar  Materias</a>
+                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="btn btn-sm btn-success"> Ver Materias</a>
+                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="btn btn-sm btn-warning"> Asignar  Materias</a>
                                 </td>
                             </tr>
                         @endforeach

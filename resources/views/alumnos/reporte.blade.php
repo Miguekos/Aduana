@@ -42,7 +42,8 @@ $result = mysqli_query($con,$sql);
         <div class="card-body">
             {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
             {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
-            <table id="table_id" class="table compact display table-sm">
+            {{--<table id="table_id" class="table compact display table-sm">--}}
+            <table id="table_id" class="ui celled table" style="width:100%">
                 <thead>
                         <tr>
                             <th>#</th>

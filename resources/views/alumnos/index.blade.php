@@ -22,7 +22,8 @@
                 <div class="card-body">
                     {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
                     {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
-                    <table id="table_id" class="table compact display table-sm">
+                    {{--<table id="table_id" class="table compact display table-sm">--}}
+                    <table id="table_id" class="ui celled table" style="width:100%">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -48,8 +49,8 @@
                                 <td>{{ $alumnos->horario_id($alumnos->horario)  }}</td>
                                 <td>{{ $alumnos->frecuencia_id($alumnos->frecuencia)  }}</td>
                                 <td>
-                                    <a type="" href="{{ url ('/get', $alumnos->id) }}" class="badge badge-success"> Ver</a>
-                                    <a type="" href="{{ route ('alumno.edit', $alumnos->id) }}" class="badge badge-warning"> Editar</a>
+                                    <a type="" href="{{ url ('/get', $alumnos->id) }}" class="btn btn-sm btn-success"> Imprimir</a>
+                                    <a type="" href="{{ route ('alumno.edit', $alumnos->id) }}" class="btn btn-sm btn-warning"> Editar</a>
                                 </td>
 
                             </tr>

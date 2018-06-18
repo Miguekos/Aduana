@@ -110,6 +110,7 @@ class ControlController extends Controller
         $materias = Control::find($control);
 //        $notas = DB::table('notas')->where('id_materia',$control)->sum('nota');
         $notas = Nota::where('id_materia',$control)->sum('nota');
-        return view ('notas.addnotas',compact ('alumnos','materias','notas'));
+        $notasC = Nota::where('id_materia',$control)->count('nota');
+        return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC'));
     }
 }
