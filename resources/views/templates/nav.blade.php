@@ -1,4 +1,4 @@
-    
+
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,7 +39,12 @@
         {{--</li>--}}
         <li class="nav-item dropdown">
 
-              {{ Auth::user()->name }}
+            @if(Auth::user()->id == null)
+                {{--No hace nada saldra solo cuando expire--}}
+            @else
+                {{ Auth::user()->name }}
+            @endif
+
 
         </li>
       </ul>
@@ -55,4 +60,3 @@
               <i class="fa fa-lock"></i> Salir</a>
       </div>
 
-    
