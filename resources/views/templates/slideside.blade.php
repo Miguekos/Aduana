@@ -29,7 +29,7 @@
 
             <li class="nav-item nav-dropdown">
               <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon fa fa-users"></i> Alumnos</a>
+                <i class="nav-icon fa fa-graduation-cap"></i> Alumnos</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route ('alumno.index') }}">
@@ -48,17 +48,17 @@
               </li>
               <li class="nav-item nav-dropdown">
                   <a class="nav-link" href="{{ route ('materia.index') }}">
-                      <i class="nav-icon fa fa-handshake-o"></i> Materias
+                      <i class="nav-icon fa fa-book"></i> Materias
                   </a>
               </li>
               <li class="nav-item nav-dropdown">
                   <a class="nav-link" href="{{ route ('teacher.index') }}">
-                      <i class="nav-icon fa fa-handshake-o"></i> Profesores
+                      <i class="nav-icon fa fa-users"></i> Profesores
                   </a>
               </li>
               <li class="nav-item nav-dropdown">
                   <a class="nav-link" href="{{ route ('control.index') }}">
-                      <i class="nav-icon fa fa-handshake-o"></i> Control
+                      <i class="nav-icon fa fa-folder"></i> Control
                   </a>
               </li>
 
