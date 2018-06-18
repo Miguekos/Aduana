@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Alumno;
 use App\Nota;
 use Illuminate\Http\Request;
 use Mockery\Matcher\Not;
@@ -36,7 +37,8 @@ class NotaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Nota::create ($request->all());
+        return redirect()->route('control.index');
     }
 
     /**
@@ -45,9 +47,13 @@ class NotaController extends Controller
      * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function show(Nota $nota)
+    public function show($id, Nota $nota)
     {
-
+        $alumno = Alumno::findOrFail($id);
+//        $nota = Nota::where('id_materia',$nota)
+//            ->where('id_alumno',$id)->sum('nota');
+        $nota = Nota::where('id_materia',$nota)->sum('nota');
+        return $nota ." ". $alumno->nombre;
     }
 
     /**
@@ -58,8 +64,7 @@ class NotaController extends Controller
      */
     public function edit($nota)
     {
-        $notas = Nota::find ($nota);
-        return $nota;
+
     }
 
     /**

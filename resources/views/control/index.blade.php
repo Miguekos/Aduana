@@ -40,7 +40,7 @@
                               <td>{{ $controls->dni }}</td>
                               <td>{{ $controls->fecha_de_inicio }}</td>
                                 <td>
-                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="badge badge-success"> Ver</a>
+                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="badge badge-success"> Ver Materias</a>
                                     <a type="" href="{{ route ('control.edit', $controls->id) }}" class="badge badge-warning"> Asignar  Materias</a>
                                 </td>
                             </tr>

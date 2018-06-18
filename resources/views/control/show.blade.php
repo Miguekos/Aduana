@@ -26,7 +26,8 @@
                         <td>{{ $materias->id }}</td>
                         <td>{{ $materias->materia }}</td>
                         <td>
-                            <a type="" href="{{ url ('/addnotas/{id}/{control}'),$alumno->id, $materias->id }}" class="badge badge-success"> Agregar notas</a>
+                            <a type="" href="{{ url ('/addnotas/' . $alumno->id ."/". $materias->id)  }}" class="badge badge-success"> Agregar notas</a>
+                            <a type="" href="{{ url ('/pronotas/' . $alumno->id ."/". $materias->id)  }}" class="badge badge-success"> Promedio notas</a>
                         </td>
                     </tr>
                 @endforeach

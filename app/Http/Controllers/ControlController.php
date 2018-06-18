@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Control;
 use App\Alumno;
 use App\Materia;
+use App\Nota;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ControlController extends Controller
 {
@@ -99,6 +101,15 @@ class ControlController extends Controller
     {
         $alumnos = Alumno::find($id);
         $materias = Control::find($control);
-        return view ('control.notas',compact ('alumnos','materias'));
+        return view ('notas.create',compact ('alumnos','materias'));
+    }
+
+    public function proNotas($id, $control)
+    {
+        $alumnos = Alumno::find($id);
+        $materias = Control::find($control);
+//        $notas = DB::table('notas')->where('id_materia',$control)->sum('nota');
+        $notas = Nota::where('id_materia',$control)->sum('nota');
+        return view ('notas.addnotas',compact ('alumnos','materias','notas'));
     }
 }
