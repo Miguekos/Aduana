@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Alumno;
 use App\Tipodecurso;
+use App\Teacher;
+use App\Materia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,7 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      $alumnos_max = Alumno::max('id');
+      $teachers_max = Teacher::max('id');
+      $materias_max = Materia::max('id');
+      return view('home',compact ('alumnos_max','teachers_max','materias_max'));
     }
 
     public function get($id){

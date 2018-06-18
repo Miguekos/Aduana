@@ -59,4 +59,3 @@
           <a class="dropdown-item" href="{{ route('logout') }}">
               <i class="fa fa-lock"></i> Salir</a>
       </div>
-

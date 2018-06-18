@@ -14,7 +14,7 @@
                         <div class="card-body p-0 d-flex align-items-center">
                             <i class="fa fa-group bg-primary p-4 px-5 font-2xl mr-3"></i>
                             <div>
-                                <div class="text-value-sm text-primary">365</div>
+                                <div class="text-value-sm text-primary">{{ $alumnos_max }}</div>
                                 <div class="text-muted text-uppercase font-weight-bold small">Alumnos</div>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="card-body p-0 d-flex align-items-center">
                             <i class="fa fa-handshake-o bg-warning p-4 px-5 font-2xl mr-3"></i>
                             <div>
-                                <div class="text-value-sm text-warning">32</div>
+                                <div class="text-value-sm text-warning">{{ $teachers_max }}</div>
                                 <div class="text-muted text-uppercase font-weight-bold small">Profesores</div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="card-body p-0 d-flex align-items-center">
                             <i class="fa fa-product-hunt bg-info p-4 px-5 font-2xl mr-3"></i>
                             <div>
-                                <div class="text-value-sm text-info">44</div>
+                                <div class="text-value-sm text-info">{{ $materias_max }}</div>
                                 <div class="text-muted text-uppercase font-weight-bold small">Materias</div>
                             </div>
                         </div>
@@ -61,6 +61,8 @@
               <!--/.col-->
             </div>
             <!--/.row-->
+
+
 
             <div class="card">
               <div class="card-body">
