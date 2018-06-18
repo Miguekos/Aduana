@@ -31,9 +31,10 @@
                             <th>DNI</th>
                             <th>Fecha Inicio</th>
                             <th>Tipo de Curso</th>
-                            <th>Modalidad</th>
+                            <!-- <th>Modalidad</th> -->
                             <th>Horarios</th>
                             <th>Frecuencia</th>
+                            <!-- <th>Forma de Pago</th> -->
                             <th width="100px">Accion</th>
                         </tr>
                         </thead>
@@ -45,9 +46,10 @@
                                 <td>{{ $alumnos->dni }}</td>
                                 <td>{{ $alumnos->fecha_de_inicio  }}</td>
                                 <td>{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso)  }}</td>
-                                <td>{{ $alumnos->modalidad_id($alumnos->modalidad)  }}</td>
+                                <!-- <td>{{ $alumnos->modalidad_id($alumnos->modalidad)  }}</td> -->
                                 <td>{{ $alumnos->horario_id($alumnos->horario)  }}</td>
                                 <td>{{ $alumnos->frecuencia_id($alumnos->frecuencia)  }}</td>
+                                <!-- <td>{{ $alumnos->formas_de_pago_id($alumnos->formas_de_pago)  }}</td> -->
                                 <td>
                                     <a type="" href="{{ url ('/get', $alumnos->id) }}" class="btn btn-sm btn-success"> Imprimir</a>
                                     <a type="" href="{{ route ('alumno.edit', $alumnos->id) }}" class="btn btn-sm btn-warning"> Editar</a>

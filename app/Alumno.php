@@ -22,7 +22,7 @@ class Alumno extends Model
         return $modalidad->nombre;
     }
 
-    public function forma_de_pago_id($alumno)
+    public function formas_de_pago_id($alumno)
     {
         $pagos = Pago::find($alumno);
         return $pagos->nombre;

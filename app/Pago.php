@@ -8,9 +8,6 @@ class Pago extends Model
 {
     protected $guarded = array();
 
-    /**
-     *
-     */
     public function Alumnos(){
         return $this->hasOne ($this->Alumnos ());
     }

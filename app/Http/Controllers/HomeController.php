@@ -31,12 +31,9 @@ class HomeController extends Controller
 
     public function get($id){
         $num = $id;
-        return view('export.xportalumnos',compact ('num'));
+        $alumno = Alumno::findOrFail($id);
+        return view('export.xportalumnos',compact ('num','alumno'));
 
-    }
-
-    public function black(){
-        return view('profile');
     }
 
     public function reporte(){
@@ -58,8 +55,6 @@ class HomeController extends Controller
 //        echo $curso5;
 //        $curso6 = Alumno::where('tipo_de_curso', '=', 6)->count();
 //        echo $curso6;
-
-
 
         return view ('alumnos.reporte');
     }
