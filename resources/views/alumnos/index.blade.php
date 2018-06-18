@@ -34,7 +34,7 @@
                             <th>Modalidad</th>
                             <th>Horarios</th>
                             <th>Frecuencia</th>
-                            <th>Accion</th>
+                            <th width="100px">Accion</th>
                         </tr>
                         </thead>
                         <tbody>

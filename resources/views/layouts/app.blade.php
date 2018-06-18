@@ -32,4 +32,3 @@
         @include('templates.footer')
 
   </body>
-</html>
