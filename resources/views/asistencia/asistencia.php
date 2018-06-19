@@ -9,7 +9,20 @@
     <link href="asis/w3.css" rel="stylesheet">
 
 </head>
-
+<style>
+.asistio{
+margin-bottom: 0px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: #5cb85c;
+color: white;
+border-radius: 5px;
+padding-top: 5%;
+padding-bottom: 5%;
+font-size: 130%;
+text-align: justify;
+padding-left: 10%;
+}
+</style>
 
 <body class="">
 
