@@ -40,8 +40,36 @@ class ControlController extends Controller
      */
     public function store(Request $request)
     {
-        $control = Control::create($request->all ());
-        return redirect ()->route('control.index');
+        $materias = $request->materia;
+        $alumno = $request->id_alumno;
+        if ($materias == 2){
+            DB::table('controls')->insert([
+                ['id_alumno' => $alumno, 'materia' => 'Marketing', ],
+                ['id_alumno' => $alumno, 'materia' => 'Taller Vuce', ],
+                ['id_alumno' => $alumno, 'materia' => 'Operatica del Sectorista', ],
+                ['id_alumno' => $alumno, 'materia' => 'Investigacion del Mercado', ],
+                ['id_alumno' => $alumno, 'materia' => 'Valoracin Aduanero II', ],
+                ['id_alumno' => $alumno, 'materia' => 'Legislacio Aduanera II', ],
+                ['id_alumno' => $alumno, 'materia' => 'Nomenclatura Arancelaria II', ],
+                ['id_alumno' => $alumno, 'materia' => 'Tributacion Aduanera II', ],
+                ['id_alumno' => $alumno, 'materia' => 'Documentacion Sintad', ]
+            ]);
+            return redirect ()->route('control.index');
+        }elseif ($materias == 1){
+            DB::table('controls')->insert([
+                ['id_alumno' => $alumno, 'materia' => 'Operativa de comercio exterior', ],
+                ['id_alumno' => $alumno, 'materia' => 'Legislacion Aduanera', ],
+                ['id_alumno' => $alumno, 'materia' => 'Preferencias Arancelarias', ],
+                ['id_alumno' => $alumno, 'materia' => 'Nomenclaturas y Clasificacion Aracelaria', ],
+                ['id_alumno' => $alumno, 'materia' => 'Valoracion Aduanera', ],
+                ['id_alumno' => $alumno, 'materia' => 'Tributacion Aduanera', ],
+                ['id_alumno' => $alumno, 'materia' => 'Fundamentos eticos de la tributacion Aduanera', ]
+            ]);
+            return redirect ()->route('control.index');
+        }else{
+            $control = Control::create($request->all ());
+            return redirect ()->route('control.index');
+        }
     }
 
     /**
@@ -69,6 +97,9 @@ class ControlController extends Controller
      */
     public function edit($control)
     {
+
+
+
         $alumno = Alumno::find($control);
         $materia = Materia::all();
         return view('control.create', compact ('alumno', 'materia'));
@@ -111,6 +142,7 @@ class ControlController extends Controller
 //        $notas = DB::table('notas')->where('id_materia',$control)->sum('nota');
         $notas = Nota::where('id_materia',$control)->sum('nota');
         $notasC = Nota::where('id_materia',$control)->count('nota');
-        return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC'));
+        $notasT = $notas / $notasC;
+        return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC', 'notasT'));
     }
 }

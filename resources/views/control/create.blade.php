@@ -35,8 +35,10 @@
                           <select class="form-control" name="materia" id="materia">
                             <option value="">---Elige una Materia---</option>
                             @foreach ($materia as $materias)
-                            <option value="{{ $materias->nombre_materia }}">{{ $materias->nombre_materia }}</option>
+                                  <option value="{{ $materias->nombre_materia }}">{{ $materias->nombre_materia }}</option>
                             @endforeach
+                                    <option value="1">Auxiliar de Despacho</option>
+                                    <option value="2">Sectorista y Liquidador</option>
                           </select>
                         </div>
                       </div>

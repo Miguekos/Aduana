@@ -37,6 +37,7 @@
                                         <label class="col-md-3 col-form-label">Tipo de Curso</label>
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="tipo_de_curso">
+                                                {{--<option value="{{ $alumnos->tipo_de_curso }}">{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso) }}</option>--}}
                                                 <option value="{{ $alumnos->tipo_de_curso }}">{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso) }}</option>
                                                 <option value="1">Auxiliar de Despacho Aduanero (curso)</option>
                                                 <option value="2">Sectorista Aduanero (curso)</option>
@@ -268,7 +269,7 @@
                                     <div class="form-group col-sm-3">
                                         <label for="formas_de_pago">Forma de pago</label>
                                         <select class="form-control" name="formas_de_pago" id="formas_de_pago">
-                                            <option value="{{ $alumnos->formas_de_pago }}">{{ $alumnos->forma_de_pago_id($alumnos->formas_de_pago) }}</option>
+                                            <option value="{{ $alumnos->formas_de_pago }}">{{ $alumnos->formas_de_pago_id($alumnos->formas_de_pago) }}</option>
                                             <option value="1">Pago Mensual</option>
                                             <option value="2">Pago Contado/Visa Net</option>
                                         </select>

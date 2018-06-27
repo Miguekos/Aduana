@@ -43,6 +43,7 @@
                                 <option value="4">Gestor Aduanero(carrera)</option>
                                 <option value="5">Diplomado de Com. Intern. y Aduana</option>
                                 <option value="6">Otros</option>
+                                  <option value="7">Sectorista y Liquidador</option>
                               </select>
                             </div>
                           </div>
@@ -127,6 +128,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="">Fecha De Inicio</label>
                                     <input type="date" class="form-control" id="fecha_de_inicio" name="fecha_de_inicio" placeholder="Definir Horas">
                                 </div>
                             </div>
@@ -262,17 +264,21 @@
                                     <option value="2">Pago Contado/Visa Net</option>
                                 </select>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <label for="totalidad_fp">Totalidad</label>
                                 <input class="form-control" id="totalidad_fp" name="totalidad_fp" placeholder="Totalidad" type="text">
                             </div>
-                            <div class="col-sm-3">
-                                <label for="por_cuotas_m_fp">Por Cuotas Mensuales</label>
+                            <div class="col-sm-2">
+                                <label for="por_cuotas_m_fp">Por Cuotas</label>
                                 <input class="form-control" id="por_cuotas_m_fp" name="por_cuotas_m_fp" placeholder="Por Cuotas Mensuales" type="text">
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <label for="matricula">Matricula</label>
                                 <input class="form-control" id="matricula" name="matricula" placeholder="Matricula" type="text">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="matricula">Fehca</label>
+                                <input type="date" class="form-control" id="fecha_de_pagos" name="fecha_de_pagos" placeholder="" type="text">
                             </div>
                         </div>
                     </div>
