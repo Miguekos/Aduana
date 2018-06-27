@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+alert('Miguel Rodriguezs');
+
 window.Vue = require('vue');
 
 /**

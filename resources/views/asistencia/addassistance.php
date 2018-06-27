@@ -104,6 +104,7 @@ Inicio el:</u> <b> "."$alumnos->fecha_de_inicio"."</b><br>
 Modalidad:</u> <b> "."$alumnos->modalidad"."</b><br>
 Horario:</u> <b> "."$alumnos->horarios"."</b><br>
 Curso:</u> <b> "."$alumnos->tipo_de_curso"."</b><br>
+{!! Toastr::message() !!}
 </div>
 
 <div class='col-lg-3'>

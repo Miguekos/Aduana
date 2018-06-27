@@ -15,7 +15,8 @@ class AsistenciaController extends Controller
         $alumnos = Alumno::find($id);
         // $alumnos = Alumno::find($id);
         if ($alumnos == null) {
-          echo "No hay datos";
+          Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
+          return "{!! Toastr::message() !!}";
         }else{
 
         // return "
@@ -37,6 +38,7 @@ class AsistenciaController extends Controller
         // <div class='col-lg-3'>
         // </div>
         // ";
+        Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
         return view ('asistencia.addassistance',compact ('alumnos'));
         }
     }

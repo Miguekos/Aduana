@@ -28,6 +28,9 @@
     <script src="{{ asset('coreui/table/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('coreui/table/dataTables.semanticui.min.js') }}"></script>
     <script src="{{ asset('coreui/table/semantic.min.js') }}"></script>
+    <script>
+    toastr.info('Are you the 6 fingered man?');
+    </script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -60,4 +63,5 @@
             });
         });
     </script>
+
     </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Materia;
+
 use Illuminate\Http\Request;
 
 class MateriaController extends Controller

@@ -6,6 +6,7 @@ use App\Alumno;
 use App\Tipodecurso;
 use App\Teacher;
 use App\Materia;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
