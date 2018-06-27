@@ -21,6 +21,7 @@
                     <tr>
                         <th>Materia</th>
                         <th>Total Acumulado</th>
+                        <th>Promedio</th>
                         <th>Cantidad de Evaluaciones</th>
                         <th></th>
                     </tr>
@@ -29,6 +30,7 @@
                     <tr>
                         <td>{{ $materias->materia}}</td>
                         <td>{{ $notas }}</td>
+                        <td>{{ $notasT }}</td>
                         <td>{{ $notasC }}</td>
                         <td></td>
                     </tr>

@@ -18,6 +18,7 @@ class CreateNotasTable extends Migration
             $table->string ('id_alumno')->nullable();
             $table->string ('id_materia')->nullable();
             $table->integer ('nota')->nullable();
+            $table->string('evaluacion')->nullable();
             $table->timestamps();
         });
     }

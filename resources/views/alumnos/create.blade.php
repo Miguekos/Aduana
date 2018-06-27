@@ -278,7 +278,7 @@
                             </div>
                             <div class="col-sm-2">
                                 <label for="matricula">Fehca</label>
-                                <input type="date" class="form-control" id="fecha_de_pagos" name="fecha_de_pagos" placeholder="" type="text">
+                                <input type="date" class="form-control" id="fecha_de_pago_cronocrama" name="fecha_de_pago_cronocrama" placeholder="" type="text">
                             </div>
                         </div>
                     </div>
