@@ -13,8 +13,8 @@
           @include('templates.slideside')
 
         <main class="main">
-            {{--@include('templates.breadcrumb')--}}
-            <br>
+            @include('templates.breadcrumb')
+            {{--<br>--}}
 
 
             @yield('content')

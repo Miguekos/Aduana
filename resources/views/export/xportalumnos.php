@@ -60,7 +60,7 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
             ->setCellValue('A'.'36', $alumno->totalidad_fp)
             ->setCellValue('D'.'36', $alumno->por_cuotas_m_fp)
             ->setCellValue('F'.'36', $alumno->matricula)
-            ->setCellValue('H'.'36', $alumno->fecha_de_pago_cronocrama)
+            ->setCellValue('H'.'35', $alumno->fecha_de_pago_cronocrama)
             ->setCellValue('C'.'48', $alumno->razon_social_fac)
             ->setCellValue('B'.'49', $alumno->dni_fac)
             ->setCellValue('F'.'49', $alumno->telf_fac)

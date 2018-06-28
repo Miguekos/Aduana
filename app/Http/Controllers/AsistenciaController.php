@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Alumno;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AsistenciaController extends Controller
 {
@@ -11,14 +12,25 @@ class AsistenciaController extends Controller
     }
 
     public function addassistance($id){
-        $add = $id;
-        $alumnos = Alumno::find($id);
-        // $alumnos = Alumno::find($id);
-        if ($alumnos == null) {
-          Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
-          return "{!! Toastr::message() !!}";
-        }else{
+//        $add = $id;
+//        $alumnos = Alumno::where($id);
+//        $dni = $alumnos->dni;
+        $user = DB::table('alumnos')->where('dni', $id)->first();
 
+        if ($user == null){
+            Return "No existe en laba de datos";
+        }else{
+            $idd = $user->id;
+            $alumnos = Alumno::find($idd);
+            return view ('asistencia.addassistance',compact ('alumnos'));
+        }
+//        return $dni;
+        // $alumnos = Alumno::find($id);
+//        if ($dni == null) {
+//          Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
+//          return "{!! Toastr::message() !!}";
+//            return "no existe";
+//        }else{
         // return "
         // <div class='row'>
         //   <div class='col-lg-3'>
@@ -38,8 +50,8 @@ class AsistenciaController extends Controller
         // <div class='col-lg-3'>
         // </div>
         // ";
-        Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
-        return view ('asistencia.addassistance',compact ('alumnos'));
-        }
+//        Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
+//        return view ('asistencia.addassistance',compact ('alumnos'));
+//        }
     }
 }

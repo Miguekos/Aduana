@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 
+@section('title', 'Ver Cursos')
+@section('pagina', 'Control')
+@section('urlpagina', '/control')
+@section('pagina1', 'Ver Cursos')
+@section('active1','breadcrumb-item active')
+
+
 @section('content')
 
 

@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Asignar Cursos')
-@section('pagina', '')
+@section('pagina', 'Control')
+@section('urlpagina', '/control')
+@section('pagina1', 'Asignat Materia')
+@section('active1','breadcrumb-item active')
+{{--@section('urlpagina1', 'Control')--}}
 
 @section('content')
 
