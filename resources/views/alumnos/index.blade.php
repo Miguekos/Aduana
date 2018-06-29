@@ -42,7 +42,7 @@
                         @foreach($alumno as $alumnos)
                             <tr>
                                 <td>{{ $alumnos->id }}</td>
-                                <td>{{ $alumnos->nombre ." ". $alumnos->apellidos }}</td>
+                                <td>{{ $alumnos->apellidos ." ". $alumnos->nombre }}</td>
                                 <td>{{ $alumnos->dni }}</td>
                                 <td>{{ $alumnos->fecha_de_inicio  }}</td>
                                 <td>{{ $alumnos->tipo_de_curso_id($alumnos->tipo_de_curso)  }}</td>

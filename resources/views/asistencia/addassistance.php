@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <!-- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <meta http-equiv="Refresh" content="5;url=/agregarasistencia.php"> -->
 
-    <!-- <meta id="meta-refresh" http-equiv="refresh" content="30; URL=(your url)"> -->
+
 <style>
 .asistio{
 margin-bottom: 0px;
@@ -104,7 +97,6 @@ Inicio el:</u> <b> "."$alumnos->fecha_de_inicio"."</b><br>
 Modalidad:</u> <b> "."$alumnos->modalidad"."</b><br>
 Horario:</u> <b> "."$alumnos->horarios"."</b><br>
 Curso:</u> <b> "."$alumnos->tipo_de_curso"."</b><br>
-{!! Toastr::message() !!}
 </div>
 
 <div class='col-lg-3'>

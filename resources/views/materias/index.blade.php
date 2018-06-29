@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('tittle','Materias')
+@section('pagina', 'Materia')
 
 @section('content')
 
@@ -29,7 +30,7 @@
                         <td>{{ $materias->id }}</td>
                         <td>{{ $materias->nombre_materia }}</td>
                         <td>
-                            <a type="" href="#" class="btn btn-sm btn-warning"> Editar</a>
+                            <a type="" href="{{ route('materia.edit',$materias->id) }}" class="btn btn-sm btn-warning"> Editar</a>
                         </td>
 
                     </tr>

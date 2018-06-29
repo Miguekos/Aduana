@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Alumno;
 use App\Materia;
 
 use Illuminate\Http\Request;
@@ -59,9 +60,10 @@ class MateriaController extends Controller
      * @param  \App\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function edit(Materia $materia)
+    public function edit($materia)
     {
-        //
+        $materias = Materia::find($materia);
+        return view('materias.edit',compact('materias'));
     }
 
     /**
@@ -71,9 +73,12 @@ class MateriaController extends Controller
      * @param  \App\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Materia $materia)
+    public function update(Request $request, $materia)
     {
-        //
+        $materias  = Materia::findOrFail($materia);
+        $input = $request->all();
+        $materias->fill($input)->save();
+        return redirect ()->route ('materia.index');
     }
 
     /**

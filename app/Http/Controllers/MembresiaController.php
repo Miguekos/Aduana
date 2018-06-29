@@ -66,7 +66,6 @@ class MembresiaController extends Controller
                 $membresia->role = $request->role;
                 $membresia->status = $request->status;
                 $membresia->save();
-
                 // redirect
                 //Session::flash('message', 'Successfully created membresia!');
                 return redirect('/membresia');
