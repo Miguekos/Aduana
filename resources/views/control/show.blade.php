@@ -9,8 +9,11 @@
 
 
 @section('content')
-
-
+    @if( session('error') )
+        <div class="text-center alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
@@ -30,6 +33,7 @@
                 </thead>
                 <tbody>
                 @foreach($controls as $materias)
+
                     <tr>
                         <td>{{ $materias->id }}</td>
                         <td>{{ $materias->materia }}</td>
@@ -44,6 +48,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 @endsection

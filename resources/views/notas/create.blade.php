@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title', 'Agregar Notas')
+@section('pagina', 'Control')
+@section('urlpagina', '/control')
+@section('pagina1', 'Agregar Notas')
+@section('active1','breadcrumb-item active')
 
+@section('content')
 
     <form action="{{ route ('nota.store') }}" method="post">
         {{ csrf_field() }}
@@ -41,17 +46,14 @@
                         {{--<input type="text" class="form-control col-lg-6" placeholder="Agrega la nota" name="nota" id="nota">--}}
                         <input type="hidden" name="id_alumno" value="{{ $alumnos->id }}">
                         <input type="hidden" name="id_materia" value="{{ $materias->id }}">
+                        <input type="hidden" name="nombre_materia" value="{{ $materias->materia }}">
                     </div>
                     <div class="form-group">
                         <label for="comentario">Agregar Comentario</label>
-                        <select class="form-control col-sm-3" name="evaluacion" id="evaluacion">
-                            <option value="1">Evaluacion 1</option>
-                            <option value="2">Evaluacion 2</option>
-                            <option value="3">Evaluacion 3</option>
-                            <option value="4">Evaluacion 4</option>
-                            <option value="5">Evaluacion 5</option>
-                            <option value="6">Evaluacion 6</option>
-                            <option value="7">Evaluacion 7</option>
+                        <select class="form-control col-sm-3" name="prueba" id="prueba">
+                            @foreach($prueba as $pruebas)
+                            <option value="{{ $pruebas->id }}">{{ $pruebas->prueba }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

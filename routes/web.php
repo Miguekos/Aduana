@@ -28,6 +28,7 @@ Route::get('/asistencia', 'AsistenciaController@index')->name('asistencia');
 Route::get('/addassistance/{id}', 'AsistenciaController@addassistance')->name('addassistance');
 
 
+Route::post('/updatenotas/{nota}/{alumno}', 'NotaController@updatenotas')->name('updatenotas');
 
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');
@@ -35,6 +36,8 @@ Route::resource ('alumno', 'AlumnoController');
 Route::resource ('materia', 'MateriaController');
 Route::resource ('teacher', 'TeacherController');
 Route::resource ('control', 'ControlController');
+Route::get('/prueba', 'ControlController@prueba')->name('prueba');
+Route::get('/redirect', 'ControlController@redirect')->name('redirect');
 Route::resource ('nota', 'NotaController');
 Route::get('/addnotas/{id}/{control}', 'ControlController@addNotas')->name('addnotas');
 Route::get('/pronotas/{id}/{control}', 'ControlController@proNotas')->name('pronotas');

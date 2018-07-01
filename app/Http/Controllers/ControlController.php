@@ -6,8 +6,10 @@ use App\Control;
 use App\Alumno;
 use App\Materia;
 use App\Nota;
+use App\Prueba;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class ControlController extends Controller
 {
@@ -97,9 +99,6 @@ class ControlController extends Controller
      */
     public function edit($control)
     {
-
-
-
         $alumno = Alumno::find($control);
         $materia = Materia::all();
         return view('control.create', compact ('alumno', 'materia'));
@@ -132,17 +131,71 @@ class ControlController extends Controller
     {
         $alumnos = Alumno::find($id);
         $materias = Control::find($control);
-        return view ('notas.create',compact ('alumnos','materias'));
+        $prueba = Prueba::all();
+        return view ('notas.create',compact ('alumnos','materias','prueba'));
     }
 
+    /**
+     * @param $id
+     * @param $control
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
     public function proNotas($id, $control)
     {
+
         $alumnos = Alumno::find($id);
-        $materias = Control::find($control);
-//        $notas = DB::table('notas')->where('id_materia',$control)->sum('nota');
+//        $notas = Nota::all();
+//        return view('prueba',compact('notas'));
+//        return $notas;
+
+//        $pruebas = Nota::all();
+//        return $notas->prueba_id;
+//        return view('prueba',compact('notas'));
+
+//        $cursos = DB::table('notas')->where('id_alumno',$alumnos->id)->get();
+        $cursos = Nota::where('id_materia', $control)->get();
+
+//        return $cursos;
+//        foreach ($cursos as $alumnos) {
+//            return $alumnos->prueba_id(1);
+//            return Nota::find($alumnos->id)->prueba_id();
+//        }
+
         $notas = Nota::where('id_materia',$control)->sum('nota');
         $notasC = Nota::where('id_materia',$control)->count('nota');
+        //Si no hay materias no se puede promediar y se salta para evitar errores
+        if ($notas == 0){
+            Session::flash('error','No se puede Promediar si no tiene notas registradas..!!');
+            return redirect()->route('control.show',$id);
+
+        }
         $notasT = $notas / $notasC;
-        return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC', 'notasT'));
+        return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC', 'notasT','cursos','pruebas'));
+    }
+
+    public function prueba()
+    {
+//        $notas = Prueba::find(1);
+//        return $notas->prueba;
+//        return view('prueba',compact('notas'));
+//        $nota = Nota::all();
+//        return $nota->prueba_id;
+
+//        $alumno = Nota::all();
+//            foreach ($alumno as $alumnos){
+//                return $alumnos->prueba_id(1);
+//
+//        }
+
+//        $alumno = Alumno::all();
+//        foreach ($alumno as $alumnos){
+//            return $alumnos->horario_id(1);
+//        }
+
+    }
+
+    public function redirect()
+    {
+
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Alumno;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 
 class AlumnoController extends Controller
@@ -10,13 +11,14 @@ class AlumnoController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
+
 //        $alumnos = Membresia::paginate(10);
 
-        $alumno = Alumno::all ();
+        $alumno = Alumno::all();
         return view ('alumnos.index', compact ('alumno'));
     }
 

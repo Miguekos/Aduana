@@ -16,9 +16,11 @@ class CreateNotasTable extends Migration
         Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
             $table->string ('id_alumno')->nullable();
-            $table->string ('id_materia')->nullable();
+            $table->integer ('id_materia')->nullable();
+            $table->string ('nombre_materia')->nullable();
             $table->integer ('nota')->nullable();
-            $table->string('evaluacion')->nullable();
+            $table->integer ('prueba')->unsigned()->nullable();
+            $table->foreign('prueba')->references('id')->on('pruebas');
             $table->timestamps();
         });
     }

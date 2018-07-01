@@ -3,7 +3,7 @@
 @section('title', 'Asignar Cursos')
 @section('pagina', 'Control')
 @section('urlpagina', '/control')
-@section('pagina1', 'Asignat Materia')
+@section('pagina1', 'Asigna Curso')
 @section('active1','breadcrumb-item active')
 {{--@section('urlpagina1', 'Control')--}}
 

@@ -39,8 +39,9 @@
         {{--</li>--}}
         <li class="nav-item dropdown">
 
-            @if(Auth::user()->id == null)
-                {{--No hace nada saldra solo cuando expire--}}
+
+            @if (session('status'))
+                {{ Auth::user()->name }}
             @else
                 {{ Auth::user()->name }}
             @endif

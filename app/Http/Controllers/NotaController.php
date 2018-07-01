@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Alumno;
 use App\Nota;
 use Illuminate\Http\Request;
-use Mockery\Matcher\Not;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class NotaController extends Controller
 {
@@ -37,8 +38,24 @@ class NotaController extends Controller
      */
     public function store(Request $request)
     {
-        Nota::create ($request->all());
-        return redirect()->route('control.index');
+
+
+//        $id = Nota::findOrFail($request->prueba);
+//        return $id;
+        $id_m = $request->id_materia;
+        $id_p = $request->prueba;
+        $prueba = DB::table('notas')->where([
+            'id_materia' => $id_m,
+            'prueba' => $id_p
+        ])->first();
+        if ($prueba){
+            Session::flash('error','Ya se registro NOTA en esta Evaluacion');
+            return redirect()->route('control.show', ['id' => $request->id_alumno]);
+        }else{
+            Nota::create ($request->all());
+            return redirect()->route('control.show', ['id' => $request->id_alumno]);
+        }
+//
     }
 
     /**
@@ -62,9 +79,16 @@ class NotaController extends Controller
      * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function edit($nota)
+    public function updatenotas($nota, $alumno)
     {
+        $alumnos = Alumno::findOrFail($alumno);
+        $nota = Nota::findOrFail($nota);
 
+        DB::table('notas')
+            ->where('id', $nota->id)
+            ->update(['nota' => $nota->nota]);
+        Session::flash('updatenota','Se actualizo la nota correctamente');
+        return redirect()->route('pronotas',$alumnos->id,$nota->id);
     }
 
     /**

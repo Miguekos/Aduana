@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title', 'Promedio')
+@section('pagina', 'Control')
+@section('urlpagina', '/control')
+@section('pagina1', 'Promedio')
+@section('active1','breadcrumb-item active')
+
 @section('content')
     <style>
     .ui.grid {
@@ -20,21 +26,31 @@
                 <thead>
                     <tr>
                         <th>Materia</th>
-                        <th>Total Acumulado</th>
-                        <th>Promedio</th>
-                        <th>Cantidad de Evaluaciones</th>
-                        <th></th>
+                        <th>Nota</th>
+                        <th>Evaluacion</th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($cursos as $curso)
                     <tr>
-                        <td>{{ $materias->materia}}</td>
-                        <td>{{ $notas }}</td>
-                        <td>{{ $notasT }}</td>
-                        <td>{{ $notasC }}</td>
+                        <td>{{ $curso->nombre_materia}}</td>
+                        <td>{{ $curso->nota }}</td>
+                        <td>{{ $curso->prueba_id($curso->prueba) }}</td>
+                        <td>
+                            <a class="btn btn-sm btn-warning" data-toggle="modal" data-target="#myModal{{ $curso->id }}">Cambiar nota</a>
+                        </td>
+                        @include('templates.modal')
+                @endforeach
                         <td></td>
                     </tr>
                 </tbody>
+                <tfooter>
+                    <tr>
+                        <td><b><u>Total:</u></b></td>
+                        <td>{{ $notasT }}</td>
+                        <td>{{ $notasC }}</td>
+                    </tr>
+                </tfooter>
             </table>
             </div>
         </div>

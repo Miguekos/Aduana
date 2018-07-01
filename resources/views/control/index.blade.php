@@ -17,7 +17,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Control de Materias
+                    <i class="fa fa-align-justify"></i> Control de Cursos
                 </div>
                 <div class="card-body">
                     {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
@@ -41,8 +41,8 @@
                               <td>{{ $controls->dni }}</td>
                               <td>{{ $controls->fecha_de_inicio }}</td>
                                 <td>
-                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="btn btn-sm btn-success"> Ver Materias</a>
-                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="btn btn-sm btn-warning"> Asignar  Materias</a>
+                                    <a type="" href="{{ route ('control.show', $controls->id) }}" class="btn btn-sm btn-success"> Ver Cursos</a>
+                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="btn btn-sm btn-warning"> Asignar  Cursos</a>
                                 </td>
                             </tr>
                         @endforeach

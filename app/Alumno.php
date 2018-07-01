@@ -12,7 +12,6 @@ class Alumno extends Model
     public function tipo_de_curso_id($alumno)
     {
         $tipo_curso = Tipodecurso::find($alumno);
-
         return $tipo_curso->nombre;
     }
 

@@ -8,9 +8,6 @@ class Frecuencia extends Model
 {
     protected $guarded = array();
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
     public function Alumno(){
         return $this->hasOne ($this->Alumno ());
     }
