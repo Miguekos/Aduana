@@ -39,9 +39,6 @@ class NotaController extends Controller
     public function store(Request $request)
     {
 
-
-//        $id = Nota::findOrFail($request->prueba);
-//        return $id;
         $id_m = $request->id_materia;
         $id_p = $request->prueba;
         $prueba = DB::table('notas')->where([
