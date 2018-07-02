@@ -9,7 +9,9 @@ use App\Teacher;
 use App\Materia;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 use Mockery\Generator\ClassWithFinalMethod;
 
 class HomeController extends Controller
@@ -31,10 +33,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $alumnos_max = Alumno::max('id');
-      $teachers_max = Teacher::max('id');
-      $materias_max = Materia::max('id');
-      return view('home',compact ('alumnos_max','teachers_max','materias_max'));
+
+//        Session::forget('UserName');
+        $nombre_user = Auth::user()->name;
+        Session::put('UserName',$nombre_user);
+
+        $alumnos_max = Alumno::max('id');
+        $teachers_max = Teacher::max('id');
+        $materias_max = Materia::max('id');
+        return view('home',compact ('alumnos_max','teachers_max','materias_max'));
     }
 
     public function get($id){
@@ -45,12 +52,14 @@ class HomeController extends Controller
     }
 
     public function reporte(){
-        $count = DB::table('assistance')->count('id');
+//        $count = DB::table('assistance')->count('id');
         $alumno = Asistencia::all();
-        foreach ($alumno as $alumnos){
-            $asis = Alumno::find($alumnos->person_id);
-            return $asis->nombre;
-        }
+        return view('alumnos.reporte',compact('alumno'));
+//        foreach ($alumno as $alumnos){
+//            $asis = Alumno::find($alumnos->person_id);
+//            return $asis->nombre;
+//        }
+
 
 //        $alumnos = Alumno::all ();
 //        $tipos_cursos = Tipodecurso::all ();

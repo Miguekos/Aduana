@@ -175,6 +175,8 @@ class ControlController extends Controller
 
     public function prueba()
     {
+
+        return Session::all();
 //        $notas = Prueba::find(1);
 //        return $notas->prueba;
 //        return view('prueba',compact('notas'));

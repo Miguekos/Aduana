@@ -39,8 +39,10 @@
         {{--</li>--}}
         <li class="nav-item dropdown">
 
-            {{ session('name') }}
-            {{--Aqui va el nombre del usuario en parte izquierda arriba--}}
+
+            @if( session('UserName') )
+                    {{ session('UserName') }}
+            @endif
 
         </li>
       </ul>

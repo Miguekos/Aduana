@@ -26,7 +26,6 @@ padding-left: 10%;
 
 <body class="">
 
-
 <section class="content" style="padding-top: 0px; padding-bottom: 0px;">
     <section class="content-header" style="padding-bottom: 10px;">
         <h1 style="font-size: 40px" class="text-center">

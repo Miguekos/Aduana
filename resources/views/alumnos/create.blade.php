@@ -70,7 +70,8 @@
                                             <option value="1">Intensivo (L - V)</option>
                                             <option value="2">Interdiario (L - M - V)</option>
                                             <option value="3">Sabados</option>
-                                            <option value="4">Otros (Especificar)</option>
+                                            <option value="4">Interdiario (M - J - S)</option>
+                                            <option value="5">Otros (Especificar)</option>
                                         </select>
                                     </div>
                                 </div>

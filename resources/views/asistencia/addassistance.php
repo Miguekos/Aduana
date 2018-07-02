@@ -69,20 +69,6 @@ padding-left: 10%;
 
 <?php
 
-date_default_timezone_set('America/Lima');
-$dias_S = array("Dom","Lun","Mar","Mie","Jue","Vie","Sab");
-$meses_S = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-$fcs = $dias_S[date('w')]." ".date('j').", ".$meses_S[date('n')-1]. "  ".date('Y'). ", " .date('g:i a');
-$fcs1 = $dias_S[date('w')]." ".date('j');
-$fechaS = $dias_S[date('w')];
-$fecha = date("Y-m-d");
-$fecha1 = date("d-m-Y");
-$fecha2 = date("d");
-$fecha3 = date("m");
-$fecha4 = date("Y");
-$fecha6 = date("Y-M-D");
-
-
 echo "
 <div class='row'>
   <div class='col-lg-3'>
@@ -104,6 +90,5 @@ Curso:</u> <b> "."$alumnos->tipo_de_curso"."</b><br>
 ";
 
 ?>
-
 </body>
 </html>

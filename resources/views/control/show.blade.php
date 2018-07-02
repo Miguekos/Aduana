@@ -10,8 +10,13 @@
 
 @section('content')
     @if( session('error') )
-        <div class="text-center alert alert-danger">
+        <div class="text-center alert alert-danger col-sm-6 container-fluid">
             {{ session('error') }}
+        </div>
+    @endif
+    @if( session('updatenota') )
+        <div class="text-center alert alert-success col-sm-6 container-fluid">
+            {{ session('updatenota') }}
         </div>
     @endif
 <div class="col-lg-12">

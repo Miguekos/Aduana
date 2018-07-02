@@ -18,16 +18,19 @@
                         <th>#</th>
                         <th>Nombres</th>
                         <th>DNI</th>
-                        <th class="text-center">Fecha de de Asistencia</th>
-                    </tr>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Asistencia</th></tr>
                 </thead>
                 <tbody>
+                @foreach($alumno as $alumnos)
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>{{ $alumnos->id }}</th>
+                        <th>{{ $alumnos->nombre." ".$alumnos->apellidos }}</th>
+                        <th>{{ $alumnos->dni }}</th>
+                        <th>{{ $alumnos->fecha_de_inicio }}</th>
+                        <th>{{ $alumnos->created_at }}</th>
                     </tr>
+                @endforeach
                 </tbody>
                 </table>
                 </div>
