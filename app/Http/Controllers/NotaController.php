@@ -76,16 +76,17 @@ class NotaController extends Controller
      * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function updatenotas($nota, $alumno)
+    public function updatenotas($alumno, $nota)
     {
         $alumnos = Alumno::findOrFail($alumno);
         $nota = Nota::findOrFail($nota);
 
-        DB::table('notas')
-            ->where('id', $nota->id)
-            ->update(['nota' => $nota->nota]);
-        Session::flash('updatenota','Se actualizo la nota correctamente');
-        return redirect()->route('pronotas',$alumnos->id,$nota->id);
+        return $nota->id;
+//        DB::table('notas')
+//            ->where('id', $nota->id)
+//            ->update(['nota' => $nota->nota]);
+//        Session::flash('updatenota','Se actualizo la nota correctamente');
+//        return redirect()->route('control.index');
     }
 
     /**
@@ -95,9 +96,13 @@ class NotaController extends Controller
      * @param  \App\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Nota $nota)
+    public function update(Request $request, $nota)
     {
-        //
+        $notas = Nota::find($nota);
+        $notas->nota = $request->nota;
+        $notas->save();
+        Session::flash('updatenota','Se actualizo la NOTA correctamente');
+        return redirect()->route('control.show',$notas->id_alumno);
     }
 
     /**

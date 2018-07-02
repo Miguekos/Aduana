@@ -14,7 +14,7 @@
           <a class="nav-link" href="{{ url ('/home') }}">Escritorio</a>
         </li>--}}
         <li class="nav-item px-3">
-          <a class="nav-link" href="{{ route('register') }}">Usuarios</a>
+          <a class="nav-link" href="{{ route('register') }}">Registrar</a>
         </li>
         {{--<li class="nav-item px-3">
           <a class="nav-link" href="#">Configuracion</a>
@@ -39,13 +39,8 @@
         {{--</li>--}}
         <li class="nav-item dropdown">
 
-
-            @if (session('status'))
-                {{ Auth::user()->name }}
-            @else
-                {{ Auth::user()->name }}
-            @endif
-
+            {{ session('name') }}
+            {{--Aqui va el nombre del usuario en parte izquierda arriba--}}
 
         </li>
       </ul>

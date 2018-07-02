@@ -18,7 +18,7 @@ class CreateGraficaTable extends Migration
             $table->integer('valor')->nullable();
             $table->string('tiempo')->nullable();
             $table->string('dia')->nullable();
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 

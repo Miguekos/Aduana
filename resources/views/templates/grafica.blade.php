@@ -14,6 +14,7 @@ $fechaS = $dias_S[date('w')];
 
 //Distintos Formatos de fecha
 $fecha = date("Y-m-d");
+echo $fecha;
 $fecha1 = date("d-m-Y");
 $fecha2 = date("d");
 $fecha3 = date("m");
@@ -46,11 +47,13 @@ $asd = mysqli_fetch_row($total_b);
 $zxc = $asd[0];
 
 //Declaracion de variable para usar de forma mas comoda el LIKE en mysql
-$fechaM = $fcs1."%";
+//$fechaM = $fcs1."%";
+$fechaM = $fecha."%";
+//echo $fechaM;
 
 //Si no existe asistencia actual crea una
 if ($zxc===null) {
-    $query4  = "SELECT COUNT(*) FROM assistance WHERE date_at LIKE '$fechaM'";
+    $query4  = "SELECT COUNT(*) FROM assistance WHERE created_at LIKE '$fechaM'";
     $total_a = mysqli_query($conexion, $query4);
     $asd = mysqli_fetch_row($total_a);
     $qwe = $asd[0];
@@ -61,7 +64,7 @@ if ($zxc===null) {
     //Si ya existe actualiza la que esta
 }else{
 
-    $query4  = "SELECT COUNT(*) FROM assistance WHERE date_at LIKE '$fechaM' and kind_id = 1";
+    $query4  = "SELECT COUNT(*) FROM assistance WHERE created_at LIKE '$fechaM'";
     $total_a = mysqli_query($conexion, $query4);
     $asd = mysqli_fetch_row($total_a);
     $qwe = $asd[0];
@@ -91,7 +94,6 @@ $total_f = mysqli_query($conexion, $sql3);
 
 
                     <div id="container"></div>
-
 
 
         <script type="text/javascript">

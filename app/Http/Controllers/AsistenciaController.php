@@ -23,7 +23,11 @@ class AsistenciaController extends Controller
 //            $idd = $alumnos->id;
             $alumnos = Alumno::find($alumnos->id);
             DB::table('assistance')->insert([
-                ['person_id' => $alumnos->id,],
+                'person_id' => $alumnos->id,
+                'nombre' => $alumnos->nombre,
+                'dni' => $alumnos->dni,
+                'apellidos' => $alumnos->apellidos,
+                'fecha_de_inicio' => $alumnos->fecha_de_inicio,
             ]);
             return view ('asistencia.addassistance',compact ('alumnos'));
 

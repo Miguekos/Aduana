@@ -15,12 +15,12 @@ class CreateAssistanceTable extends Migration
     {
         Schema::create('assistance', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kind_id')->nullable();
-            $table->string('date_at')->nullable();
             $table->integer('person_id')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->integer('total_asis')->nullable();
-            $table->timestamps();
+            $table->string('nombre')->nullable();
+            $table->string('dni')->nullable();
+            $table->string('apellidos')->nullable();
+            $table->date('fecha_de_inicio')->nullable();
+            $table->nullableTimestamps();
         });
     }
 
