@@ -32,6 +32,7 @@
                     <div class="card">
                       <div class="card-header">
                         Asignar materias para <strong><h1>{{ $alumno->nombre . " " . $alumno->apellidos }}</h1></strong>
+                        <input type="hidden" name="id_alumno" value="{{ $alumno->id }}">
                       </div>
                       <div class="card-body">
                         <div class="form-group">
@@ -41,8 +42,8 @@
                             @foreach ($materia as $materias)
                                   <option value="{{ $materias->nombre_materia }}">{{ $materias->nombre_materia }}</option>
                             @endforeach
-                                    <option value="1">Auxiliar de Despacho</option>
-                                    <option value="2">Sectorista y Liquidador</option>
+                                    <option value="Legislacion Aduanera">Auxiliar de Despacho</option>
+                                    <option value="Marketing">Sectorista y Liquidador</option>
                           </select>
                         </div>
                       </div>

@@ -19,10 +19,15 @@
             {{ session('updatenota') }}
         </div>
     @endif
+    @if( session('mensaje') )
+        <div class="text-center alert alert-warning col-sm-6 container-fluid">
+            {{ session('mensaje') }}
+        </div>
+    @endif
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            Materias Asignadas a <h1>{{ $alumno->nombre ." ". $alumno->apellidos }}</h1>
+            Materias Asignadas a <h1>{{ $alumno->nombre ." ". $alumno->apellidos }} <small class="pull-right"> Promedio: {{ $promedioT }}</small></h1>
         </div>
         <div class="card-body">
             {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}

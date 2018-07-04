@@ -42,9 +42,21 @@ class ControlController extends Controller
      */
     public function store(Request $request)
     {
+      $materiaE = Control::where([
+        'materia' => $request->materia,
+        'id_alumno' => $request->id_alumno
+        ])->get();
+      foreach ($materiaE as $key) {
+        if ($key->materia = $request->materia) {
+          // return "Existe";
+          // return $key->materia;
+          Session::flash('mensaje','Este curso ya fue asignado..!!');
+          return redirect()->route('control.index');
+        }
+      }
         $materias = $request->materia;
         $alumno = $request->id_alumno;
-        if ($materias == 2){
+        if ($materias == "Marketing"){
             DB::table('controls')->insert([
                 ['id_alumno' => $alumno, 'materia' => 'Marketing', ],
                 ['id_alumno' => $alumno, 'materia' => 'Taller Vuce', ],
@@ -57,7 +69,7 @@ class ControlController extends Controller
                 ['id_alumno' => $alumno, 'materia' => 'Documentacion Sintad', ]
             ]);
             return redirect ()->route('control.index');
-        }elseif ($materias == 1){
+        }elseif ($materias == "Legislacion Aduanera"){
             DB::table('controls')->insert([
                 ['id_alumno' => $alumno, 'materia' => 'Operativa de comercio exterior', ],
                 ['id_alumno' => $alumno, 'materia' => 'Legislacion Aduanera', ],
@@ -71,7 +83,7 @@ class ControlController extends Controller
         }else{
             $control = Control::create($request->all ());
             return redirect ()->route('control.index');
-        }
+         }
     }
 
     /**
@@ -82,13 +94,25 @@ class ControlController extends Controller
      */
     public function show($control)
     {
-        $controls = Control::all()->where ('id_alumno',$control);
-        $alumno = Alumno::findOrFail($control);
-
-        //dd ($alumno);
-        //dd ($controls);
-       return view ('control.show',compact ('controls','alumno'));
-       // return $control;
+        $id = $control;
+        $cursos = Control::where('id_alumno',$control)->count('*');
+        $promedio1 = Nota::where('id_alumno',$control)->count('*');
+        $promedio2 = Nota::where('id_alumno',$control)->sum('nota');
+        if ($cursos == 0){
+            Session::flash('mensaje','No hay cursos asignados..!!');
+            return redirect()->route('control.index');
+        }elseif ($promedio2 != null) {
+          $promedioT = $promedio2 / $promedio1;
+          $controls = Control::all()->where ('id_alumno',$control);
+          $alumno = Alumno::findOrFail($control);
+         return view ('control.show',compact ('controls','alumno','promedioT'));
+       }else {
+         Session::flash('mensaje','No hay notas para promediar..!!');
+         $promedioT = 0;
+         $controls = Control::all()->where ('id_alumno',$control);
+         $alumno = Alumno::findOrFail($control);
+        return view ('control.show',compact ('controls','alumno','promedioT'));
+       }
     }
 
     /**
@@ -167,7 +191,6 @@ class ControlController extends Controller
         if ($notas == 0){
             Session::flash('error','No se puede Promediar si no tiene notas registradas..!!');
             return redirect()->route('control.show',$id);
-
         }
         $notasT = $notas / $notasC;
         return view ('notas.addnotas',compact ('alumnos','materias','notas','notasC', 'notasT','cursos','pruebas'));
@@ -178,12 +201,12 @@ class ControlController extends Controller
 
         $alumnos = Alumno::find(1);
         // return View ('prueba', compact ('alumnos'));
-        return "
-
-        $alumnos->frecuencia_id($alumnos->id);
-
-
-        ";
+        // return "
+        //
+        // $alumnos->frecuencia_id($alumnos->id);
+        //
+        //
+        // ";
 //        $notas = Prueba::find(1);
 //        return $notas->prueba;
 //        return view('prueba',compact('notas'));

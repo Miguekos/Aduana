@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Alumno;
 use App\Materia;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
@@ -38,8 +39,16 @@ class MateriaController extends Controller
      */
     public function store(Request $request)
     {
-        $materia = Materia::create($request->all());
-        return redirect()->route('materia.index');
+      // $all = $request->all();
+      $materiaE = Materia::where('nombre_materia',$request->nombre_materia)->get();
+      foreach ($materiaE as $key) {
+        if ($key->nombre_materia = $request->nombre_materia) {
+          Session::flash('mensaje','Esta materia ya existe..!!');
+          return redirect()->route('materia.index');
+        }
+      }
+      $materia = Materia::create($request->all());
+      return redirect()->route('materia.index');
 
     }
 
@@ -87,8 +96,11 @@ class MateriaController extends Controller
      * @param  \App\Materia  $materia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Materia $materia)
+    public function destroy($materia)
     {
-        //
+      $materias  = Materia::findOrFail($materia);
+      $materias->delete();
+      Session::flash('mensaje','Se Elimino correctamente.!!');
+      return redirect ()->route ('materia.index');
     }
 }

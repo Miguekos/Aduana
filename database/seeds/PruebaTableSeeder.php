@@ -12,7 +12,7 @@ class PruebaTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 6; $i++){
+        for ($i = 0; $i < 7; $i++){
             if ($i == 0){
                 $prueba = "Prueba 1";
             }elseif ($i == 1){
@@ -24,7 +24,9 @@ class PruebaTableSeeder extends Seeder
             }elseif ($i == 4){
                 $prueba = "Prueba 5";
             }elseif ($i == 5){
-                $prueba = "Prueba 6";
+                $prueba = "Final";
+            }elseif ($i == 6){
+                $prueba = "Nota Docente";
             }
             $tipodecurso = Prueba::create ([
                 'prueba' => $prueba,

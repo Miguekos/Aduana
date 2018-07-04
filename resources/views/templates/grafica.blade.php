@@ -26,7 +26,7 @@ $fecha6 = date("Y-M-D");
 $server = "localhost";
 // $name_db = "fitseven_miguel";
 // $pass_db = "Alexkos12.";
-// $db = "fitseven_gymsport";
+// $db = "fitseven_aduanademo";
 
 $name_db = "root";
 $pass_db = "";

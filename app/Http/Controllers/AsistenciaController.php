@@ -44,8 +44,9 @@ class AsistenciaController extends Controller
                 'apellidos' => $alumno->apellidos,
                 'fecha_de_inicio' => $alumno->fecha_de_inicio,
             ]);
-            $alum = Alumno::find($alumnos->frecuencia);
-            return $alum->nombre;
+
+            // $alumnos = Alumno::find($alumnos->frecuencia);
+            // return $alum->nombre;
             // echo "$alum->frecuencia_id()";
             // echo "
             //
@@ -67,7 +68,7 @@ class AsistenciaController extends Controller
             // <div class='col-lg-3'>
             // </div>
             // ";
-            // return view ('asistencia.addassistance',compact ('alumnos'));
+            return view ('asistencia.addassistance',compact ('alumno'));
 
         }
     }

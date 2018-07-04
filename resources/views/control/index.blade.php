@@ -13,7 +13,11 @@
             /*border-bottom: 1px solid #20a8d8;*/
         /*}*/
     </style>
-
+    @if(session('mensaje'))
+    <div class="text-center alert alert-warning col-sm-6 container-fluid">
+      <b>{{ session('mensaje') }}</b>
+    </div>
+    @endif
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">

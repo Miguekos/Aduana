@@ -33,7 +33,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#table_id").DataTable({
-                "order": [[ 0, "desc" ]],
+                "order": [[ 0, "asc" ]],
                 "language": {
                     "sProcessing":    "Procesando...",
                     "sLengthMenu":    "Mostrar _MENU_ registros",

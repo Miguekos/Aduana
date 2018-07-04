@@ -75,14 +75,14 @@ echo "
 </div>
 
 <div class='col-lg-6'>
-<div class='asistio'>Nombre: <b>"."$alumnos->nombre"." "."$alumnos->apellidos"."</b><br>
+<div class='asistio'>Nombre: <b>"."$alumno->nombre"." "."$alumno->apellidos"."</b><br>
 Registro:</u> <b></b><br>
 Asistencia:</u> <b> </b><br>
-Frecuencia:</u> <b>"."$alumnos->frecuencia_id(1)"."</b><br>
-Inicio el:</u> <b> "."$alumnos->fecha_de_inicio"."</b><br>
-Modalidad:</u> <b> "."$alumnos->modalidad"."</b><br>
-Horario:</u> <b> "."$alumnos->horarios"."</b><br>
-Curso:</u> <b> "."$alumnos->tipo_de_curso"."</b><br>
+Frecuencia:</u> <b>"."$alumno->frecuencia"."</b><br>
+Inicio el:</u> <b> "."$alumno->fecha_de_inicio"."</b><br>
+Modalidad:</u> <b> "."$alumno->modalidad"."</b><br>
+Horario:</u> <b> "."$alumno->horarios"."</b><br>
+Curso:</u> <b> "."$alumno->tipo_de_curso"."</b><br>
 </div>
 
 <div class='col-lg-3'>

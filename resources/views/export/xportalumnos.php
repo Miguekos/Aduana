@@ -12,6 +12,7 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
     //$objPHPExcel = new PHPExcel();
     $objReader = new PHPExcel_Reader_Excel2007();
     $objPHPExcel = $objReader->load("../Alumno.xlsx");
+    // $objPHPExcel = $objReader->load("../nuevol/Alumno.xlsx");
 
 
     //Informacion del excel

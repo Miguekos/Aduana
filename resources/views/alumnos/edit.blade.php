@@ -130,7 +130,7 @@
                                         <div class="col-md-9 col-form-label">
                                             <select class="form-control" name="modalidad">
                                                 <option value="{{ $alumnos->modalidad }}">{{ $alumnos->modalidad_id($alumnos->modalidad) }}</option>
-                                                <option value="1">Precencial</option>
+                                                <option value="1">Presencial</option>
                                                 <option value="2">Virtual</option>
                                             </select>
                                         </div>
