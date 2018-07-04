@@ -78,7 +78,7 @@ echo "
 <div class='asistio'>Nombre: <b>"."$alumnos->nombre"." "."$alumnos->apellidos"."</b><br>
 Registro:</u> <b></b><br>
 Asistencia:</u> <b> </b><br>
-Frecuencia:</u> <b>"."$alumnos->frecuencia"."</b><br>
+Frecuencia:</u> <b>"."$alumnos->frecuencia_id(1)"."</b><br>
 Inicio el:</u> <b> "."$alumnos->fecha_de_inicio"."</b><br>
 Modalidad:</u> <b> "."$alumnos->modalidad"."</b><br>
 Horario:</u> <b> "."$alumnos->horarios"."</b><br>

@@ -176,7 +176,14 @@ class ControlController extends Controller
     public function prueba()
     {
 
-        return Session::all();
+        $alumnos = Alumno::find(1);
+        // return View ('prueba', compact ('alumnos'));
+        return "
+
+        $alumnos->frecuencia_id($alumnos->id);
+
+
+        ";
 //        $notas = Prueba::find(1);
 //        return $notas->prueba;
 //        return view('prueba',compact('notas'));

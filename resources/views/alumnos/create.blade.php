@@ -1,7 +1,10 @@
-@extends('layouts.app')
+w@extends('layouts.app')
 
 @section('title', 'Alumnos')
-@section('pagina', 'Nuevo Alumnos')
+@section('pagina', 'Alumnos')
+@section('urlpagina', '/alumno')
+@section('pagina1', 'Nuevo alumno')
+@section('active1','breadcrumb-item active')
 
 @section('content')
 
@@ -123,7 +126,7 @@
                                     <label class="col-md-3 col-form-label">Modalidad</label>
                                     <div class="col-md-9 col-form-label">
                                         <select class="form-control" name="modalidad">
-                                            <option value="1">Precencial</option>
+                                            <option value="1">Presencial</option>
                                             <option value="2">Virtual</option>
                                         </select>
                                     </div>
@@ -261,8 +264,7 @@
                             <div class="form-group col-sm-3">
                                 <label for="formas_de_pago">Forma de pago</label>
                                 <select class="form-control" name="formas_de_pago" id="formas_de_pago">
-                                    <option value="1">Pago Mensual</option>
-                                    <option value="2">Pago Contado/Visa Net</option>
+                                    <option value="1">Pagar en scotibank, con DNI en las cuentas de Escuela de Aduana</option>
                                 </select>
                             </div>
                             <div class="col-sm-2">

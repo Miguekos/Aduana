@@ -3,6 +3,7 @@
 //Con esto personalizo el nombre del archivo exportado
 date_default_timezone_set('America/Lima');
 $fechaA = date("Y-m-d_g:i_a");
+$fechaB = date("Y-m-d");
 $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
 // echo "$nombre";
 
@@ -30,6 +31,7 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
             ->setCellValue('A'.'7', $alumno->tipo_de_curso_id($alumno->tipo_de_curso))
             ->setCellValue('A'.'10', $alumno->horario_id($alumno->horario))
             ->setCellValue('C'.'10', $alumno->definir_horas)
+            ->setCellValue('E'.'5', $fechaB)
             ->setCellValue('A'.'16', $alumno->modalidad_id($alumno->modalidad))
             ->setCellValue('A'.'13', $alumno->frecuencia_id($alumno->frecuencia))
             ->setCellValue('A'.'35', $alumno->formas_de_pago_id($alumno->formas_de_pago))
