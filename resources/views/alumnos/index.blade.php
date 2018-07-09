@@ -21,7 +21,7 @@
                 </div>
                 <div class="card-body">
                     {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
-                    {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
+                    {{--<table id="example" class="table table-striped table-bordered" style="width:100%">--}}
                     {{--<table id="table_id" class="table compact display table-sm">--}}
                     <table id="table_id" class="ui celled table" style="width:100%">
                         <thead>

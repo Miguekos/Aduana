@@ -22,12 +22,13 @@
                 <span>DNI: {{ $alumnos->dni }}</span>
             </div>
             <div class="card-body">
-            <table id="table_id" class="table" style="width:100%">
+                <table id="table_id" class="ui celled table" style="width:100%">
                 <thead>
                     <tr>
                         <th>Materia</th>
                         <th>Nota</th>
                         <th>Evaluacion</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +42,7 @@
                         </td>
                         @include('templates.modal')
                 @endforeach
-                        <td></td>
+
                     </tr>
                 </tbody>
                 <tfooter>

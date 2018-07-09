@@ -25,7 +25,7 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Accion</th>
+                    <th width="15%">Accion</th>
                 </tr>
                 </thead>
                 <tbody>

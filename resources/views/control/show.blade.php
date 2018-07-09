@@ -10,19 +10,19 @@
 
 @section('content')
     @if( session('error') )
-        <div class="text-center alert alert-danger col-sm-6 container-fluid">
-            {{ session('error') }}
-        </div>
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
     @endif
     @if( session('updatenota') )
-        <div class="text-center alert alert-success col-sm-6 container-fluid">
-            {{ session('updatenota') }}
-        </div>
+        <script>
+            toastr.success('{{ session('updatenota') }}');
+        </script>
     @endif
     @if( session('mensaje') )
-        <div class="text-center alert alert-warning col-sm-6 container-fluid">
-            {{ session('mensaje') }}
-        </div>
+        <script>
+            toastr.warning('{{ session('mensaje') }}');
+        </script>
     @endif
 <div class="col-lg-12">
     <div class="card">

@@ -1,7 +1,7 @@
 <?php // $url = htmlspecialchars($_SERVER['HTTP_REFERER']) ?>
 <!-- Breadcrumb-->
 <ol class="breadcrumb">
-    <input type="button" class="btn btn-sm btn-default" value="Atras" onclick="history.back(-1)" />
+    <input type="button" value="Volver de donde viniste!" onclick="history.back(-1)" />
     {{--<li class="fa fa-angle-double-left"><a href="{{ $url }}"> Back</a></li>--}}
     {{--<li class="breadcrumb-item active"><a href="@yield('urlpagina')">@yield('pagina')</a></li>--}}
     {{--<li class="@yield('active1')"><a href="@yield('urlpagina1')">@yield('pagina1')</a></li>--}}

@@ -1,13 +1,8 @@
-w@extends('layouts.app')
+@extends('layouts.app')
 
-@section('title', 'Alumnos')
-@section('pagina', 'Alumnos')
-@section('urlpagina', '/alumno')
-@section('pagina1', 'Nuevo alumno')
-@section('active1','breadcrumb-item active')
+@section('title', 'Nuevo Alumno')
 
 @section('content')
-
 <style media="screen">
 .card-header {
   padding: 0.75rem 1.25rem;
