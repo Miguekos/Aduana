@@ -13,7 +13,21 @@
             /*border-bottom: 1px solid #20a8d8;*/
         /*}*/
     </style>
-
+    @if( session('error') )
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+    @if( session('success') )
+        <script>
+            toastr.success('{{ session('success') }}');
+        </script>
+    @endif
+    @if( session('warning') )
+        <script>
+            toastr.warning('{{ session('warning') }}');
+        </script>
+    @endif
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">

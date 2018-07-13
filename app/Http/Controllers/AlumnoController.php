@@ -40,7 +40,15 @@ class AlumnoController extends Controller
      */
     public function store(Request $request)
     {
-      $alumnos = Alumno::create($request->all());
+        $dniV = Alumno::where('dni',$request->dni)->get();
+        foreach ($dniV as $key) {
+            if ($key->dni = $request->dni) {
+                Session::flash('error','Este dni ya existe..!!');
+                return redirect()->route('alumno.index');
+            }
+        }
+        $alumnos = Alumno::create($request->all());
+        Session::flash('success','Se registro el alumno: '.$request->nombre.' '.$request->apellido.' con DNI: '.$request->dni.'..!!');
       return redirect()->route('alumno.index');
 
     }
@@ -82,6 +90,7 @@ class AlumnoController extends Controller
         $alumnos  = Alumno::findOrFail($alumno);
         $input = $request->all();
         $alumnos->fill($input)->save();
+        Session::flash('success','Se actualizo correctamente..!!');
         return redirect ()->route ('alumno.index');
     }
 

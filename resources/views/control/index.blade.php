@@ -13,11 +13,25 @@
             /*border-bottom: 1px solid #20a8d8;*/
         /*}*/
     </style>
+    @if( session('error') )
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+    @if( session('success') )
+        <script>
+            toastr.success('{{ session('success') }}');
+        </script>
+    @endif
+    @if( session('warning') )
+        <script>
+            toastr.warning('{{ session('warning') }}');
+        </script>
+    @endif
     @if(session('mensaje'))
         <script>
             toastr.warning('{{ session('mensaje') }}');
         </script>
-    </div>
     @endif
         <div class="col-lg-12">
             <div class="card">
@@ -45,7 +59,6 @@
                               <td>{{ $controls->fecha_de_inicio }}</td>
                                 <td>
                                     <a type="" href="{{ route ('control.show', $controls->id) }}" class="btn btn-sm btn-success"> Ver Cursos</a>
-                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="btn btn-sm btn-warning"> Asignar  Cursos</a>
                                 </td>
                             </tr>
                         @endforeach
