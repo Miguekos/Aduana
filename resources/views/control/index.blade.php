@@ -59,6 +59,7 @@
                               <td>{{ $controls->fecha_de_inicio }}</td>
                                 <td>
                                     <a type="" href="{{ route ('control.show', $controls->id) }}" class="btn btn-sm btn-success"> Ver Cursos</a>
+                                    <a type="" href="{{ route ('control.edit', $controls->id) }}" class="btn btn-sm btn-warning"> Asignar  Cursos</a>
                                 </td>
                             </tr>
                         @endforeach

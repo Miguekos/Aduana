@@ -50,7 +50,7 @@ class ControlController extends Controller
         if ($key->materia = $request->materia) {
           // return "Existe";
           // return $key->materia;
-          Session::flash('error','Este curso ya fue asignado..!!');
+          Session::flash('mensaje','Este curso ya fue asignado..!!');
             return redirect ()->route('control.show',$request->id_alumno);
         }
       }

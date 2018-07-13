@@ -27,7 +27,7 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            <h1>{{ $alumno->nombre ." ". $alumno->apellidos }} <a type="" href="{{ route ('control.edit', $alumno->id) }}" class="btn btn-sm btn-warning"> Asignar  Cursos</a><small class="pull-right"> Promedio: {{ $promedioT }}</small></h1>
+            <h1>{{ $alumno->nombre ." ". $alumno->apellidos }}<small class="pull-right"> Promedio: {{ $promedioT }}</small></h1>
         </div>
         <div class="card-body">
             {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
