@@ -13,10 +13,25 @@
             /*border-bottom: 1px solid #20a8d8;*/
         /*}*/
     </style>
+    @if( session('error') )
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+    @if( session('success') )
+        <script>
+            toastr.success('{{ session('success') }}');
+        </script>
+    @endif
+    @if( session('warning') )
+        <script>
+            toastr.warning('{{ session('warning') }}');
+        </script>
+    @endif
     @if(session('mensaje'))
-    <div class="text-center alert alert-warning col-sm-6 container-fluid">
-      <b>{{ session('mensaje') }}</b>
-    </div>
+        <script>
+            toastr.warning('{{ session('mensaje') }}');
+        </script>
     @endif
         <div class="col-lg-12">
             <div class="card">
@@ -24,17 +39,15 @@
                     <i class="fa fa-align-justify"></i> Control de Cursos
                 </div>
                 <div class="card-body">
-                    {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
-                    {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
-                    {{--<table id="table_id" class="table compact display table-sm">--}}
                     <table id="table_id" class="ui celled table" style="width:100%">
+                    {{--<table id="table_id" class="table compact display table-sm">--}}
                         <thead>
                             <tr>
                               <th>#</th>
                               <th>Nombre</th>
                               <th>DNI</th>
                               <th>Fecha Inicio</th>
-                              <th>Accion</th>
+                              <th width="20%">Accion</th>
                             </tr>
                         </thead>
                         <tbody>

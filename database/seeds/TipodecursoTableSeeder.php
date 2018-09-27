@@ -11,7 +11,7 @@ class TipodecursoTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 7; $i++){
+        for ($i = 0; $i < 6; $i++){
             if ($i == 0){
                 $nombre = "Auxiliar de Despacho Aduanero (curso)";
             }elseif ($i == 1){
@@ -24,8 +24,6 @@ class TipodecursoTableSeeder extends Seeder
                 $nombre = "Diplomado de Com. Intern. y Aduana";
             }elseif ($i == 5){
                 $nombre = "Otros";
-            }elseif ($i == 6){
-                $nombre = "Sectorista y Liquidador";
             }
             $tipodecurso = Tipodecurso::create ([
                 'nombre' => $nombre,

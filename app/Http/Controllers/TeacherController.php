@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Materia;
 use App\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class TeacherController extends Controller
 {
@@ -58,9 +60,11 @@ class TeacherController extends Controller
      * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teacher $teacher)
+    public function edit($teacher)
     {
-        //
+        $materia = Materia::all();
+        $teachers = Teacher::findOrFail($teacher);
+        return view('teachers.edit',compact('teachers','materia'));
     }
 
     /**
@@ -70,9 +74,16 @@ class TeacherController extends Controller
      * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teacher $teacher)
+    public function update(Request $request, $teacher)
     {
-        //
+        $teachers = Teacher::findOrFail($teacher);
+        $teachers->nombre_teacher = $request->nombre_teacher;
+        $teachers->materia = $request->materia;
+        $teachers->aula = $request->aula;
+        $teachers->horario = $request->horario;
+        $teachers->save();
+        Session::flash('success','Se actualizo Profesor correctamente');
+        return back();
     }
 
     /**

@@ -22,6 +22,7 @@
                     <div class="form-group">
                         <label for="nota">Agregar nota</label>
                         <select class="form-control col-sm-1" name="nota" id="nota">
+                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

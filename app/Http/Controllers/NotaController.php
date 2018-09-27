@@ -101,8 +101,8 @@ class NotaController extends Controller
         $notas = Nota::find($nota);
         $notas->nota = $request->nota;
         $notas->save();
-        Session::flash('updatenota','Se actualizo la NOTA correctamente');
-        return redirect()->route('control.show',$notas->id_alumno);
+        Session::flash('success','Se actualizo la NOTA correctamente');
+        return back();
     }
 
     /**

@@ -43,7 +43,7 @@
                                 <td>{{ $teachers->aula  }}</td>
                                 <td>{{ $teachers->horario  }}</td>
                                 <td>
-                                    <a type="" href="#" class="btn btn-sm btn-warning"> Editar</a>
+                                    <a type="" href="{{ route('teacher.edit',$teachers->id) }}" class="btn btn-sm btn-warning"> Editar</a>
                                 </td>
 
                             </tr>

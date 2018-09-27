@@ -13,7 +13,21 @@
             /*border-bottom: 1px solid #20a8d8;*/
         /*}*/
     </style>
-
+    @if( session('error') )
+        <script>
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+    @if( session('success') )
+        <script>
+            toastr.success('{{ session('success') }}');
+        </script>
+    @endif
+    @if( session('warning') )
+        <script>
+            toastr.warning('{{ session('warning') }}');
+        </script>
+    @endif
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
@@ -21,7 +35,7 @@
                 </div>
                 <div class="card-body">
                     {{--<table id="table_id" class="table compact display table-responsive-sm table-bordered table-striped table-sm">--}}
-                    {{--<table class="table table-responsive-sm table-bordered table-striped table-sm">--}}
+                    {{--<table id="example" class="table table-striped table-bordered" style="width:100%">--}}
                     {{--<table id="table_id" class="table compact display table-sm">--}}
                     <table id="table_id" class="ui celled table" style="width:100%">
                         <thead>

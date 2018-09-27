@@ -11,8 +11,15 @@ class PagoTableSeeder extends Seeder
      */
     public function run()
     {
-        $pago = Pago::create ([
-            'nombre' => "Pagar en scotibank, con DNI en las cuentas de la Escuela de Aduana",
-        ]);
+        for ($i = 0; $i < 2; $i++){
+            if ($i == 0){
+                $nombre = "Pago Mensual";
+            }elseif ($i == 1){
+                $nombre = "Pago Contado/Visa Net";
+            }
+            $pago = Pago::create ([
+                'nombre' => $nombre,
+            ]);
+        }
     }
 }

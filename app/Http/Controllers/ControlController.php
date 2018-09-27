@@ -50,8 +50,8 @@ class ControlController extends Controller
         if ($key->materia = $request->materia) {
           // return "Existe";
           // return $key->materia;
-          Session::flash('mensaje','Este curso ya fue asignado..!!');
-          return redirect()->route('control.index');
+          Session::flash('error','Este curso ya fue asignado..!!');
+            return redirect ()->route('control.show',$request->id_alumno);
         }
       }
         $materias = $request->materia;
@@ -68,7 +68,7 @@ class ControlController extends Controller
                 ['id_alumno' => $alumno, 'materia' => 'Tributacion Aduanera II', ],
                 ['id_alumno' => $alumno, 'materia' => 'Documentacion Sintad', ]
             ]);
-            return redirect ()->route('control.index');
+            return redirect ()->route('control.show',$request->id_alumno);
         }elseif ($materias == "Legislacion Aduanera"){
             DB::table('controls')->insert([
                 ['id_alumno' => $alumno, 'materia' => 'Operativa de comercio exterior', ],
@@ -79,10 +79,10 @@ class ControlController extends Controller
                 ['id_alumno' => $alumno, 'materia' => 'Tributacion Aduanera', ],
                 ['id_alumno' => $alumno, 'materia' => 'Fundamentos eticos de la tributacion Aduanera', ]
             ]);
-            return redirect ()->route('control.index');
+            return redirect ()->route('control.show',$request->id_alumno);
         }else{
             $control = Control::create($request->all ());
-            return redirect ()->route('control.index');
+            return redirect ()->route('control.show',$request->id_alumno);
          }
     }
 
@@ -189,7 +189,7 @@ class ControlController extends Controller
         $notasC = Nota::where('id_materia',$control)->count('nota');
         //Si no hay materias no se puede promediar y se salta para evitar errores
         if ($notas == 0){
-            Session::flash('error','No se puede Promediar si no tiene notas registradas..!!');
+            Session::flash('error','No se puede ver si no tiene notas registradas..!!');
             return redirect()->route('control.show',$id);
         }
         $notasT = $notas / $notasC;
@@ -226,8 +226,14 @@ class ControlController extends Controller
 
     }
 
-    public function redirect()
+    public function eliminarcurso($id)
     {
-
+        $alumno = Control::where('id',$id)->first();
+//        return $alumno->id_alumno;
+        $ids = Control::findOrFail($id);
+////        dd($ids);
+        $ids->delete();
+        Session::flash('error','Se Elimino correctamente.!!');
+        return redirect ()->route ('control.show',$alumno->id_alumno);
     }
 }

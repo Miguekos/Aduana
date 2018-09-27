@@ -40,9 +40,14 @@
         <li class="nav-item dropdown">
 
 
+            @unless (Auth::check())
+                You are not signed in.
+            @endunless
+
             @if( session('UserName') )
                     {{ session('UserName') }}
             @endif
+
 
         </li>
       </ul>

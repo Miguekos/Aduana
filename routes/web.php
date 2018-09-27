@@ -41,4 +41,5 @@ Route::get('/redirect', 'ControlController@redirect')->name('redirect');
 Route::resource ('nota', 'NotaController');
 Route::get('/addnotas/{id}/{control}', 'ControlController@addNotas')->name('addnotas');
 Route::get('/pronotas/{id}/{control}', 'ControlController@proNotas')->name('pronotas');
+Route::delete('/eliminarcurso/{id}', 'ControlController@eliminarcurso')->name('eliminarcurso');
 //Route::resource ('membresia', 'MembresiaController');

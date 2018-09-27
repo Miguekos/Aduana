@@ -12,7 +12,7 @@ class FrecuenciaTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 5; $i++){
+        for ($i = 0; $i < 4; $i++){
             if ($i == 0){
                 $nombre = "Intensivo (L - V)";
             }elseif ($i == 1){
@@ -20,8 +20,6 @@ class FrecuenciaTableSeeder extends Seeder
             }elseif ($i == 2){
                 $nombre = "Sabados";
             }elseif ($i == 3){
-                $nombre = "Mar-Jue-Sab";
-            }elseif ($i == 4){
                 $nombre = "Otros (Especificar)";
             }
             $frecuancia = Frecuencia::create ([
