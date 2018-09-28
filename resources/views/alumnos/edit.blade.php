@@ -52,9 +52,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input type="text" id="frecuencia_otros" value="{{ $alumnos->frecuencia_otros }}" class="form-control" name="frecuencia_otros" placeholder="Otros (Especificar)">
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="card-footer">
                                 </div>
@@ -80,9 +80,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                      <input type="text" class="form-control" name="frecuencia" placeholder="Otros (Especificar)">
-                                    </div> -->
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" name="frecuencia_otros" placeholder="Otros (Especificar)">
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                 </div>
@@ -135,8 +135,11 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" value="{{ $alumnos->fecha_de_inicio }}" id="fecha_de_inicio" name="fecha_de_inicio" placeholder="Definir Horas">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 col-form-label">Fecha de Inicio</label>
+                                        <div class="col-md-9 col-form-label">
+                                            <input type="date" class="form-control" id="fecha_de_inicio" value="{{ $alumnos->fecha_de_inicio }}" name="fecha_de_inicio" placeholder="Definir Horas">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-footer">
@@ -183,9 +186,13 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-sm-6">
+                            <div class="form-group col-sm-3">
                                 <label for="name">Lugar de Nacimiento</label>
                                 <input class="form-control" id="lugar_de_nacimiento" value="{{ $alumnos->lugar_de_nacimiento }}" name="lugar_de_nacimiento" placeholder="" type="text">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label for="name">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="fecha_de_nacimiento" value="{{ $alumnos->fecha_de_nacimiento }}" name="fecha_de_nacimiento" placeholder="" type="text">
                             </div>
                             <div class="form-group col-sm-3">
                                 <label for="dni">Telf. Fijo</label>
@@ -228,18 +235,22 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-sm-4">
-                                <label for="name">Direccion para envio de material virtual</label>
-                                <input class="form-control" id="email_envio_material" value="{{ $alumnos->email_envio_material }}" name="email_envio_material" placeholder="" type="text">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label for="dni">Persona de contacto (Emergencias)</label>
-                                <input class="form-control" id="persona_de_contacto" value="{{ $alumnos->persona_de_contacto }}" name="persona_de_contacto" placeholder="" type="text">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label for="dni">Lugar de Estudios (Actual)</label>
-                                <input class="form-control" id="lugar_de_estudio" value="{{ $alumnos->lugar_de_estudio }}" name="lugar_de_estudio" placeholder="" type="text">
-                            </div>
+                        <div class="form-group col-sm-3">
+                            <label for="name">Direccion para envio de material virtual</label>
+                            <input class="form-control" id="email_envio_material" name="email_envio_material" placeholder="" type="text">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="dni">Persona de contacto (Emergencias)</label>
+                            <input class="form-control" id="persona_de_contacto" name="persona_de_contacto" placeholder="" type="text">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="dni">Lugar de Estudios (Actual)</label>
+                            <input class="form-control" id="lugar_de_estudio" name="lugar_de_estudio" placeholder="" type="text">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="dni">Celular de contacto (Emergencias)</label>
+                            <input class="form-control" id="celular_de_contacto" name="celular_de_contacto" placeholder="" type="text">
+                        </div>
                         </div>
 
                         <div class="row">

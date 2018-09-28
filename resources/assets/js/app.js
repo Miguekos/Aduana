@@ -10,7 +10,7 @@ console.log('Aqui abajo esta el app.js personal');
 
 $(document).ready(function(){
     $("#table_id").DataTable({
-        "order": [[ 0, "asc" ]],
+        "order": [[ 0, "desc" ]],
         "language": {
             "sProcessing":    "Procesando...",
             "sLengthMenu":    "Mostrar _MENU_ registros",

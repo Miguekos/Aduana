@@ -33,6 +33,7 @@ class CreateAlumnosTable extends Migration
             $table->integer('edad')->nullable();
             $table->string('dni')->nullable();
             $table->string('lugar_de_nacimiento')->nullable();
+            $table->string('fecha_de_nacimiento')->nullable();
             $table->string('telf_fijo')->nullable();
             $table->string('celular_p')->nullable();
             $table->string('email')->nullable();
@@ -43,6 +44,7 @@ class CreateAlumnosTable extends Migration
             $table->string('celular_apo')->nullable();
             $table->string('email_envio_material')->nullable();
             $table->string('persona_de_contacto')->nullable();
+            $table->string('celular_de_contacto')->nullable();
             $table->string('lugar_de_estudio')->nullable();
             $table->string('carrera_estudio')->nullable();
             $table->string('centro_laboral')->nullable();

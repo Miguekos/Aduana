@@ -17,7 +17,7 @@ class HorarioTableSeeder extends Seeder
             }elseif ($i == 1){
                 $nombre = "Tarde";
             }elseif ($i == 2){
-                $nombre = "Sabados";
+                $nombre = "Noche";
             }elseif ($i == 3){
                 $nombre = "Otros (Especificar)";
             }

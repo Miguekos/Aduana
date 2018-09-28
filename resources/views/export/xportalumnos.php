@@ -11,8 +11,8 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
     require_once 'Classes/PHPExcel.php';
     //$objPHPExcel = new PHPExcel();
     $objReader = new PHPExcel_Reader_Excel2007();
-    // $objPHPExcel = $objReader->load("../Alumno.xlsx");
-    $objPHPExcel = $objReader->load("../nuevol/Alumno.xlsx");
+    $objPHPExcel = $objReader->load("../Alumno.xlsx");
+    //$objPHPExcel = $objReader->load("../nuevol/Alumno.xlsx");
 
 
     //Informacion del excel
@@ -39,8 +39,8 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
             ->setCellValue('A'.'39', $alumno->publicidad_id($alumno->publicidad))
             ->setCellValue('G'.'39', $alumno->publicidad_otros)
             ->setCellValue('H'.'10', $alumno->fecha_de_inicio)
-            ->setCellValue('B'.'19', $alumno->nombre)
-            ->setCellValue('F'.'19', $alumno->apellidos)
+            ->setCellValue('B'.'19', $alumno->apellidos)
+            ->setCellValue('F'.'19', $alumno->nombre)
             ->setCellValue('B'.'20', $alumno->direccion)
             ->setCellValue('B'.'21', $alumno->departamento)
             ->setCellValue('H'.'21', $alumno->edad)
@@ -55,6 +55,7 @@ $nombre = "Alumno_".$alumno->nombre."_".$alumno->apellidos."_".$fechaA.".xlsx";
             ->setCellValue('D'.'26', $alumno->telf_fijo_apo)
             ->setCellValue('F'.'26', $alumno->celular_apo)
             ->setCellValue('C'.'27', $alumno->email_envio_material)
+            ->setCellValue('H'.'28', $alumno->celular_de_contacto)
             ->setCellValue('C'.'28', $alumno->persona_de_contacto)
             ->setCellValue('C'.'29', $alumno->lugar_de_estudio)
             ->setCellValue('C'.'30', $alumno->carrera_estudio)
