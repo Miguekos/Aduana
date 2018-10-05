@@ -32,6 +32,7 @@ Route::post('/updatenotas/{nota}/{alumno}', 'NotaController@updatenotas')->name(
 
 //Membresias
 //Route::get('/membresia', 'MembresiaController@index')->name('membresia.index');
+Route::resource ('deposito', 'DepositoController');
 Route::resource ('alumno', 'AlumnoController');
 Route::resource ('materia', 'MateriaController');
 Route::resource ('teacher', 'TeacherController');
@@ -43,3 +44,5 @@ Route::get('/addnotas/{id}/{control}', 'ControlController@addNotas')->name('addn
 Route::get('/pronotas/{id}/{control}', 'ControlController@proNotas')->name('pronotas');
 Route::delete('/eliminarcurso/{id}', 'ControlController@eliminarcurso')->name('eliminarcurso');
 //Route::resource ('membresia', 'MembresiaController');
+
+

@@ -57,6 +57,11 @@
                   </a>
               </li>
               <li class="nav-item nav-dropdown">
+              <a class="nav-link" href="{{ route ('deposito.index') }}">
+                    <i class="nav-icon fa fa-money"></i> Pagos
+                </a>
+            </li>
+              <li class="nav-item nav-dropdown">
                   <a class="nav-link" href="{{ route ('control.index') }}">
                       <i class="nav-icon fa fa-folder"></i> Control
                   </a>

@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Prueba;
+use App\Deposito;
+use App\Alumno;
 use Illuminate\Http\Request;
 
-class PruebaController extends Controller
+class DepositoController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +15,8 @@ class PruebaController extends Controller
      */
     public function index()
     {
-        //
+        $pago = Alumno::all();
+        return view('pagos.index',compact('pago'));
     }
 
     /**
@@ -45,10 +43,10 @@ class PruebaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prueba  $prueba
+     * @param  \App\Deposito  $deposito
      * @return \Illuminate\Http\Response
      */
-    public function show(Prueba $prueba)
+    public function show(Deposito $deposito)
     {
         //
     }
@@ -56,10 +54,10 @@ class PruebaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prueba  $prueba
+     * @param  \App\Deposito  $deposito
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prueba $prueba)
+    public function edit(Deposito $deposito)
     {
         //
     }
@@ -68,10 +66,10 @@ class PruebaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prueba  $prueba
+     * @param  \App\Deposito  $deposito
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prueba $prueba)
+    public function update(Request $request, Deposito $deposito)
     {
         //
     }
@@ -79,10 +77,10 @@ class PruebaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prueba  $prueba
+     * @param  \App\Deposito  $deposito
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prueba $prueba)
+    public function destroy(Deposito $deposito)
     {
         //
     }

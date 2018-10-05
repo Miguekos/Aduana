@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Session;
 
 class AsistenciaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index(){
         return view('asistencia.asistencia');
     }

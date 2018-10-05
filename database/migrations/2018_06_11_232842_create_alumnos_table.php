@@ -62,6 +62,9 @@ class CreateAlumnosTable extends Migration
             $table->string('telf_fac')->nullable();
             $table->string('direccion_fac')->nullable();
             $table->string('atentido')->nullable();
+            $table->integer('grupo')->nullable();
+            $table->float('abonado')->nullable();
+            $table->float('deuda')->nullable();
             $table->timestamps();
         });
     }
